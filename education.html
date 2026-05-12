@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Joy Dhar | Education">
+  <meta name="description" content="Joy Dhar | Education, scholarships, and academic training.">
   <title>Joy Dhar | Education</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;600;800&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="page-education">
@@ -15,92 +16,179 @@
   <div class="grain-layer"></div>
 
   <header class="site-header">
-    <a class="brand-mark" href="index.html" aria-label="Home">JD</a>
-    <a class="brand-wordmark" href="index.html">Joy Dhar</a>
-    <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-      <span class="hamburger"></span>
-    </button>
+    <a class="brand-mark" href="index.html" aria-label="Home"><span>JD</span></a>
+    <div class="brand-copy">
+      <a class="brand-wordmark" href="index.html">Joy Dhar</a>
+      <p class="brand-subline">Deep Learning Researcher for Medical Imaging AI</p>
+    </div>
+    <p class="header-kicker">Academic Training</p>
   </header>
 
-  <nav class="tab-nav" aria-label="Portfolio sections">
-    <a class="tab-link" href="index.html">About</a>
-    <a class="tab-link active" href="education.html">Education</a>
-    <a class="tab-link" href="experience.html">Experience</a>
-    <a class="tab-link" href="research.html">Research</a>
-    <a class="tab-link" href="publications.html">Publications</a>
-    <a class="tab-link" href="awards.html">Awards</a>
-    <a class="tab-link" href="connect.html">Connect</a>
-  </nav>
+  <div class="nav-shell">
+    <button class="nav-compact-toggle" type="button" aria-label="Expand or shrink navigation" aria-expanded="true" aria-controls="site-nav">
+      <span class="nav-toggle-icons">
+        <i class="fa-solid fa-bars-staggered"></i>
+        <i class="fa-solid fa-chevron-up"></i>
+      </span>
+      <span class="nav-toggle-text">Shrink Navigation</span>
+    </button>
+
+    <nav class="tab-nav" id="site-nav" aria-label="Portfolio sections">
+      <a class="tab-link" href="index.html"><i class="fa-solid fa-circle-info"></i><span>About</span></a>
+      <a class="tab-link active" href="education.html"><i class="fa-solid fa-graduation-cap"></i><span>Education</span></a>
+      <a class="tab-link" href="experience.html"><i class="fa-solid fa-stethoscope"></i><span>Experience</span></a>
+      <a class="tab-link" href="research.html"><i class="fa-solid fa-microscope"></i><span>Research</span></a>
+      <a class="tab-link" href="publications.html"><i class="fa-solid fa-file-waveform"></i><span>Publications</span></a>
+      <a class="tab-link" href="awards.html"><i class="fa-solid fa-award"></i><span>Awards</span></a>
+      <a class="tab-link" href="connect.html"><i class="fa-solid fa-envelope-open-text"></i><span>Connect</span></a>
+    </nav>
+  </div>
 
   <main class="page-shell">
-    <section class="hero card reveal">
-      <p class="section-label">Trajectory</p>
-      <h2>From strong engineering fundamentals to medical AI research specialization.</h2>
-      <p>My education combines rigorous computer science training with research depth in deep learning and multimodal healthcare analytics.</p>
+    <section class="hero card reveal scan-card">
+      <div class="card-head">
+        <span class="icon-badge"><i class="fa-solid fa-graduation-cap"></i></span>
+        <div>
+          <p class="section-label">Education</p>
+          <h2>Computer science training shaped around rigorous engineering fundamentals, research depth, and high academic consistency.</h2>
+        </div>
+      </div>
+      <p>The academic path spans undergraduate engineering, postgraduate specialization, and ongoing doctoral research in dependable multimodal healthcare AI.</p>
     </section>
 
     <section class="timeline reveal">
-      <article class="card timeline-item">
-        <h3>Ph.D. in Computer Science and Engineering</h3>
-        <p class="meta">Indian Institute of Technology Ropar | Jul 2022 - Jun 2027</p>
-        <p>Advisor: Dr. Puneet Goyal</p>
-        <p>Institute Scholarship Recipient</p>
+      <article class="card timeline-item scan-card">
+        <div class="card-head">
+          <span class="icon-badge"><i class="fa-solid fa-university"></i></span>
+          <div>
+            <h3>Ph.D. in Computer Science and Engineering</h3>
+            <p class="meta">Indian Institute of Technology Ropar | Punjab, India | Jul. 2022 to Jun. 2027</p>
+          </div>
+        </div>
+        <p>Advisor: Dr. Puneet Goyal.</p>
+        <p>Institute Scholarship Recipient.</p>
       </article>
 
-      <article class="card timeline-item">
-        <h3>M.Tech. in Computer Science and Engineering</h3>
-        <p class="meta">Maulana Abul Kalam Azad University of Technology | Aug 2015 - Nov 2017</p>
-        <p>CGPA: 8.92/10 (A+)</p>
-        <p>Department Rank: 3</p>
+      <article class="card timeline-item scan-card">
+        <div class="card-head">
+          <span class="icon-badge"><i class="fa-solid fa-book-open-reader"></i></span>
+          <div>
+            <h3>M.Tech. in Computer Science and Engineering</h3>
+            <p class="meta">Maulana Abul Kalam Azad University of Technology | West Bengal, India | Aug. 2015 to Nov. 2017</p>
+          </div>
+        </div>
+        <p>CGPA: 8.92 / 10 (A+).</p>
+        <p>Ranked 3rd in the department.</p>
       </article>
 
-      <article class="card timeline-item">
-        <h3>B.Tech. in Computer Science and Engineering</h3>
-        <p class="meta">West Bengal University of Technology | Aug 2009 - Nov 2012</p>
-        <p>CGPA: 8.59/10 (A+)</p>
-        <p>Department Rank: 10</p>
+      <article class="card timeline-item scan-card">
+        <div class="card-head">
+          <span class="icon-badge"><i class="fa-solid fa-school"></i></span>
+          <div>
+            <h3>B.Tech. in Computer Science and Engineering</h3>
+            <p class="meta">West Bengal University of Technology | West Bengal, India | Aug. 2009 to Nov. 2012</p>
+          </div>
+        </div>
+        <p>CGPA: 8.59 / 10 (A+).</p>
+        <p>Ranked 10th in the department.</p>
+      </article>
+    </section>
+
+    <section class="grid-two reveal">
+      <article class="card scan-card">
+        <div class="card-head">
+          <span class="icon-badge"><i class="fa-solid fa-list-check"></i></span>
+          <div>
+            <h3>Selected Coursework</h3>
+            <p class="card-subline">Core foundations supporting current research.</p>
+          </div>
+        </div>
+        <ul class="list-tight">
+          <li>Deep Learning</li>
+          <li>Computer Vision</li>
+          <li>Advanced Computer Vision</li>
+          <li>Digital Image Processing</li>
+          <li>Pattern Recognition</li>
+          <li>Artificial Intelligence</li>
+          <li>Data Structures and Algorithms</li>
+          <li>Internet of Things</li>
+        </ul>
+      </article>
+
+      <article class="card scan-card">
+        <div class="card-head">
+          <span class="icon-badge"><i class="fa-solid fa-hand-holding-medical"></i></span>
+          <div>
+            <h3>Degree-Stage Support</h3>
+            <p class="card-subline">Scholarship-backed progression through higher education.</p>
+          </div>
+        </div>
+        <ul class="list-tight">
+          <li>IIT Ropar Institute Scholarship, 2022</li>
+          <li>IIT Dhanbad Institute Scholarship, 2022</li>
+          <li>NET Fellowship, NTA-UGC, 2019</li>
+          <li>GATE Fellowship, M.H.R.D., 2018</li>
+        </ul>
       </article>
     </section>
 
     <section class="grid-three reveal">
-      <article class="card kpi">
-        <p class="section-label">Depth</p>
+      <article class="card kpi scan-card">
+        <p class="section-label">Current Track</p>
         <strong>Ph.D.</strong>
-        <span>Current research track in AI and healthcare data fusion.</span>
+        <span>Doctoral research at IIT Ropar in multimodal and robust healthcare AI.</span>
       </article>
-      <article class="card kpi">
-        <p class="section-label">Performance</p>
-        <strong>8.92</strong>
-        <span>M.Tech CGPA with top-tier departmental ranking.</span>
+      <article class="card kpi scan-card">
+        <p class="section-label">M.Tech Rank</p>
+        <strong>3rd</strong>
+        <span>Department standing with an 8.92 / 10 CGPA.</span>
       </article>
-      <article class="card kpi">
-        <p class="section-label">Consistency</p>
-        <strong>A+</strong>
-        <span>Strong performance sustained through engineering programs.</span>
+      <article class="card kpi scan-card">
+        <p class="section-label">B.Tech Rank</p>
+        <strong>10th</strong>
+        <span>Consistent academic performance across engineering training.</span>
       </article>
     </section>
   </main>
 
   <footer class="site-footer" aria-label="Site footer">
     <div class="footer-grid">
+      <section class="footer-block footer-brand">
+        <div class="footer-emblem"><i class="fa-solid fa-dna"></i></div>
+        <p class="footer-title">Joy Dhar</p>
+        <p>Researcher in robust multimodal healthcare AI with a foundation in computer science, vision, and machine learning.</p>
+        <div class="footer-socials">
+          <a href="https://github.com/misti1203" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i><span>GitHub</span></a>
+          <a href="https://www.linkedin.com/in/joy-dhar-42930a248" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i><span>LinkedIn</span></a>
+          <a href="mailto:joy.22csz0003@iitrpr.ac.in"><i class="fa-solid fa-envelope"></i><span>Email</span></a>
+        </div>
+      </section>
+
       <section class="footer-block">
-        <p class="footer-title">Explore</p>
-        <a href="education.html">Education</a>
-        <a href="experience.html">Experience</a>
-        <a href="research.html">Research</a>
+        <p class="footer-title">Navigate</p>
+        <a href="experience.html"><i class="fa-solid fa-stethoscope"></i><span>Experience</span></a>
+        <a href="research.html"><i class="fa-solid fa-microscope"></i><span>Research</span></a>
+        <a href="awards.html"><i class="fa-solid fa-award"></i><span>Awards</span></a>
+      </section>
+
+      <section class="footer-block">
+        <p class="footer-title">Academic Focus</p>
+        <a href="education.html"><i class="fa-solid fa-university"></i><span>Doctoral Research</span></a>
+        <a href="education.html"><i class="fa-solid fa-book-open-reader"></i><span>Coursework</span></a>
+        <a href="education.html"><i class="fa-solid fa-signal"></i><span>Academic Performance</span></a>
       </section>
 
       <section class="footer-block">
         <p class="footer-title">Resources</p>
-        <a href="Joy_Dhar_CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
-        <a href="publications.html">Publications</a>
-        <a href="connect.html">Contact</a>
+        <a href="Joy_Dhar_CV.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-arrow-down"></i><span>Download CV</span></a>
+        <a href="publications.html"><i class="fa-solid fa-file-waveform"></i><span>Publications</span></a>
+        <a href="connect.html"><i class="fa-solid fa-address-card"></i><span>Contact</span></a>
       </section>
     </div>
 
     <div class="footer-meta">
       <p>Copyright &copy; <span class="current-year">2026</span> Joy Dhar. All rights reserved.</p>
-      <p>Built for GitHub Pages | Last updated: Apr 2026</p>
+      <p>Website refreshed on May 12, 2026 from the CV dated April 18, 2026.</p>
     </div>
   </footer>
 

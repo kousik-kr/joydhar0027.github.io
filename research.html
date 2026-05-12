@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Joy Dhar | Research">
+  <meta name="description" content="Joy Dhar | Research interests and current projects in robust multimodal healthcare AI.">
   <title>Joy Dhar | Research</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;600;800&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="page-research">
@@ -15,78 +16,212 @@
   <div class="grain-layer"></div>
 
   <header class="site-header">
-    <a class="brand-mark" href="index.html" aria-label="Home">JD</a>
-    <a class="brand-wordmark" href="index.html">Joy Dhar</a>
-    <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-      <span class="hamburger"></span>
-    </button>
+    <a class="brand-mark" href="index.html" aria-label="Home"><span>JD</span></a>
+    <div class="brand-copy">
+      <a class="brand-wordmark" href="index.html">Joy Dhar</a>
+      <p class="brand-subline">Deep Learning Researcher for Medical Imaging AI</p>
+    </div>
+    <p class="header-kicker">Research Themes</p>
   </header>
 
-  <nav class="tab-nav" aria-label="Portfolio sections">
-    <a class="tab-link" href="index.html">About</a>
-    <a class="tab-link" href="education.html">Education</a>
-    <a class="tab-link" href="experience.html">Experience</a>
-    <a class="tab-link active" href="research.html">Research</a>
-    <a class="tab-link" href="publications.html">Publications</a>
-    <a class="tab-link" href="awards.html">Awards</a>
-    <a class="tab-link" href="connect.html">Connect</a>
-  </nav>
+  <div class="nav-shell">
+    <button class="nav-compact-toggle" type="button" aria-label="Expand or shrink navigation" aria-expanded="true" aria-controls="site-nav">
+      <span class="nav-toggle-icons">
+        <i class="fa-solid fa-bars-staggered"></i>
+        <i class="fa-solid fa-chevron-up"></i>
+      </span>
+      <span class="nav-toggle-text">Shrink Navigation</span>
+    </button>
+
+    <nav class="tab-nav" id="site-nav" aria-label="Portfolio sections">
+      <a class="tab-link" href="index.html"><i class="fa-solid fa-circle-info"></i><span>About</span></a>
+      <a class="tab-link" href="education.html"><i class="fa-solid fa-graduation-cap"></i><span>Education</span></a>
+      <a class="tab-link" href="experience.html"><i class="fa-solid fa-stethoscope"></i><span>Experience</span></a>
+      <a class="tab-link active" href="research.html"><i class="fa-solid fa-microscope"></i><span>Research</span></a>
+      <a class="tab-link" href="publications.html"><i class="fa-solid fa-file-waveform"></i><span>Publications</span></a>
+      <a class="tab-link" href="awards.html"><i class="fa-solid fa-award"></i><span>Awards</span></a>
+      <a class="tab-link" href="connect.html"><i class="fa-solid fa-envelope-open-text"></i><span>Connect</span></a>
+    </nav>
+  </div>
 
   <main class="page-shell">
-    <section class="hero card reveal">
-      <p class="section-label">Core Direction</p>
-      <h2>Designing models that are not only accurate, but dependable under real-world uncertainty.</h2>
-      <p>My research prioritizes reliability, transferability, and computational realism in AI systems handling complex biomedical signals.</p>
+    <section class="hero card reveal scan-card">
+      <div class="card-head">
+        <span class="icon-badge"><i class="fa-solid fa-microscope"></i></span>
+        <div>
+          <p class="section-label">Research</p>
+          <h2>Designing AI systems that stay robust, efficient, and clinically relevant under multimodal complexity.</h2>
+        </div>
+      </div>
+      <p>The core research agenda combines multimodal learning, robustness analysis, domain generalization, and efficient architecture design for healthcare applications.</p>
     </section>
 
     <section class="grid-two reveal">
-      <article class="card">
-        <h3>Multimodal & Generative Models</h3>
-        <p>Fusion methods for heterogeneous sources such as imaging, omics, and tabular health records.</p>
+      <article class="card scan-card">
+        <div class="card-head">
+          <span class="icon-badge"><i class="fa-solid fa-layer-group"></i></span>
+          <div>
+            <h3>Multimodal and Generative Models</h3>
+            <p class="card-subline">Multiple modalities, shared reasoning pathways.</p>
+          </div>
+        </div>
+        <p>Multimodal fusion, multi- and cross-modal attention, transformers, visual-language models, and generative modeling for medical data integration.</p>
       </article>
-      <article class="card">
-        <h3>Robustness & Reliability Analysis</h3>
-        <p>Studying model failure boundaries and strengthening resilience against adversarial perturbations.</p>
+
+      <article class="card scan-card">
+        <div class="card-head">
+          <span class="icon-badge"><i class="fa-solid fa-shield-heart"></i></span>
+          <div>
+            <h3>Robustness and Reliability Analysis</h3>
+            <p class="card-subline">Stress-testing model behavior, not just measuring accuracy.</p>
+          </div>
+        </div>
+        <p>Adversarial attacks, empirical and certified defenses, uncertainty quantification, and curriculum-aware training strategies.</p>
       </article>
-      <article class="card">
-        <h3>Domain Adaptation Analysis</h3>
-        <p>Generalization across institutions, sensors, and demographic shifts.</p>
+
+      <article class="card scan-card">
+        <div class="card-head">
+          <span class="icon-badge"><i class="fa-solid fa-shuffle"></i></span>
+          <div>
+            <h3>Domain Adaptation and Distillation</h3>
+            <p class="card-subline">Transfer across hospitals, sensors, and data mixes.</p>
+          </div>
+        </div>
+        <p>Knowledge distillation, modality-agnostic learning, and domain generalization for transfer across settings and sources.</p>
       </article>
-      <article class="card">
-        <h3>Foundations & Architectures</h3>
-        <p>Supervised and self-supervised learning paradigms with architecture-level innovations.</p>
+
+      <article class="card scan-card">
+        <div class="card-head">
+          <span class="icon-badge"><i class="fa-solid fa-cubes-stacked"></i></span>
+          <div>
+            <h3>Learning Foundations and Architectures</h3>
+            <p class="card-subline">Architecture choices that support dependable inference.</p>
+          </div>
+        </div>
+        <p>Supervised, self-supervised, unsupervised, continual, evidential, multitask, and physics-inspired learning approaches.</p>
       </article>
-      <article class="card">
-        <h3>Biomedical & Healthcare AI</h3>
-        <p>Targeting clinically relevant tasks where interpretability and consistency matter.</p>
+
+      <article class="card scan-card">
+        <div class="card-head">
+          <span class="icon-badge"><i class="fa-solid fa-x-ray"></i></span>
+          <div>
+            <h3>Biomedical AI Targets</h3>
+            <p class="card-subline">Medical imaging, EHRs, time series, and disease prediction.</p>
+          </div>
+        </div>
+        <p>Cost-effective medical image analysis, EHR and time-series modeling, and multi-disease classification and segmentation.</p>
       </article>
-      <article class="card">
-        <h3>Active Project Threads</h3>
-        <p>Hybrid Space Aware Attention and Robust-Zero for reliable multimodal learning.</p>
+
+      <article class="card scan-card">
+        <div class="card-head">
+          <span class="icon-badge"><i class="fa-solid fa-memory"></i></span>
+          <div>
+            <h3>System Constraints</h3>
+            <p class="card-subline">Performance under practical compute and data limits.</p>
+          </div>
+        </div>
+        <p>Model design grounded in practical compute limits, missing modalities, and the realities of healthcare environments with limited resources.</p>
+      </article>
+    </section>
+
+    <section class="grid-two reveal">
+      <article class="card scan-card">
+        <div class="card-head">
+          <span class="icon-badge"><i class="fa-solid fa-bezier-curve"></i></span>
+          <div>
+            <p class="section-label">Current Project</p>
+            <h3>Does a Hybrid Space-Aware Weight Refiner Improve Multimodal Fusion Robustness?</h3>
+          </div>
+        </div>
+        <p class="meta">Punjab, India | Feb. 2026</p>
+        <p>Develops a hybrid space-aware weight refinement module that combines implicit and explicit refinement to strengthen multimodal fusion robustness.</p>
+      </article>
+
+      <article class="card scan-card">
+        <div class="card-head">
+          <span class="icon-badge"><i class="fa-solid fa-filter-circle-xmark"></i></span>
+          <div>
+            <p class="section-label">Current Project</p>
+            <h3>Robust-Zero: A Defense Framework for Zero-Shot Classification</h3>
+          </div>
+        </div>
+        <p class="meta">Punjab, India | May 2025</p>
+        <p>Jointly uses random filtering, attention-noise injection, and disentangled feature representations to mitigate vulnerabilities in zero-shot settings.</p>
+      </article>
+    </section>
+
+    <section class="grid-two reveal">
+      <article class="card scan-card">
+        <div class="card-head">
+          <span class="icon-badge"><i class="fa-solid fa-sliders"></i></span>
+          <div>
+            <h3>Research Methods in Use</h3>
+            <p class="card-subline">Modeling, defense design, and cross-modal reasoning.</p>
+          </div>
+        </div>
+        <ul class="list-tight">
+          <li>Attention-based multimodal fusion</li>
+          <li>Hybrid convolutional architectures</li>
+          <li>Uncertainty-aware optimization</li>
+          <li>Adversarial defense design</li>
+          <li>Knowledge distillation and transfer</li>
+        </ul>
+      </article>
+
+      <article class="card scan-card">
+        <div class="card-head">
+          <span class="icon-badge"><i class="fa-solid fa-hospital-user"></i></span>
+          <div>
+            <h3>Why This Agenda Matters</h3>
+            <p class="card-subline">Clinical utility depends on more than benchmark accuracy.</p>
+          </div>
+        </div>
+        <p>
+          Healthcare AI often fails where data quality, modality coverage, and infrastructure support are weakest. This research direction treats
+          robustness, efficiency, and transferability as first-order design goals rather than afterthoughts.
+        </p>
       </article>
     </section>
   </main>
 
   <footer class="site-footer" aria-label="Site footer">
     <div class="footer-grid">
+      <section class="footer-block footer-brand">
+        <div class="footer-emblem"><i class="fa-solid fa-dna"></i></div>
+        <p class="footer-title">Joy Dhar</p>
+        <p>Research on robust multimodal learning for healthcare, with emphasis on reliability under noise, attack, and shift.</p>
+        <div class="footer-socials">
+          <a href="https://github.com/misti1203" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i><span>GitHub</span></a>
+          <a href="https://www.linkedin.com/in/joy-dhar-42930a248" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i><span>LinkedIn</span></a>
+          <a href="mailto:joy.22csz0003@iitrpr.ac.in"><i class="fa-solid fa-envelope"></i><span>Email</span></a>
+        </div>
+      </section>
+
       <section class="footer-block">
-        <p class="footer-title">Explore</p>
-        <a href="research.html">Research</a>
-        <a href="publications.html">Publications</a>
-        <a href="index.html">About</a>
+        <p class="footer-title">Navigate</p>
+        <a href="publications.html"><i class="fa-solid fa-file-waveform"></i><span>Publications</span></a>
+        <a href="experience.html"><i class="fa-solid fa-stethoscope"></i><span>Experience</span></a>
+        <a href="awards.html"><i class="fa-solid fa-award"></i><span>Awards</span></a>
+      </section>
+
+      <section class="footer-block">
+        <p class="footer-title">Research Themes</p>
+        <a href="research.html"><i class="fa-solid fa-layer-group"></i><span>Multimodal Fusion</span></a>
+        <a href="research.html"><i class="fa-solid fa-shield-heart"></i><span>Robustness</span></a>
+        <a href="research.html"><i class="fa-solid fa-x-ray"></i><span>Medical Imaging</span></a>
       </section>
 
       <section class="footer-block">
         <p class="footer-title">Resources</p>
-        <a href="Joy_Dhar_CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
-        <a href="experience.html">Experience</a>
-        <a href="connect.html">Contact</a>
+        <a href="Joy_Dhar_CV.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-arrow-down"></i><span>Download CV</span></a>
+        <a href="education.html"><i class="fa-solid fa-graduation-cap"></i><span>Education</span></a>
+        <a href="connect.html"><i class="fa-solid fa-address-card"></i><span>Contact</span></a>
       </section>
     </div>
 
     <div class="footer-meta">
       <p>Copyright &copy; <span class="current-year">2026</span> Joy Dhar. All rights reserved.</p>
-      <p>Built for GitHub Pages | Last updated: Apr 2026</p>
+      <p>Website refreshed on May 12, 2026 from the CV dated April 18, 2026.</p>
     </div>
   </footer>
 

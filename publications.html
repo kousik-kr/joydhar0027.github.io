@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Joy Dhar | Publications">
+  <meta name="description" content="Joy Dhar | Publications and manuscripts in multimodal, robust, and healthcare AI.">
   <title>Joy Dhar | Publications</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;600;800&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="page-publications">
@@ -15,153 +16,348 @@
   <div class="grain-layer"></div>
 
   <header class="site-header">
-    <a class="brand-mark" href="index.html" aria-label="Home">JD</a>
-    <a class="brand-wordmark" href="index.html">Joy Dhar</a>
-    <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-      <span class="hamburger"></span>
-    </button>
+    <a class="brand-mark" href="index.html" aria-label="Home"><span>JD</span></a>
+    <div class="brand-copy">
+      <a class="brand-wordmark" href="index.html">Joy Dhar</a>
+      <p class="brand-subline">Deep Learning Researcher for Medical Imaging AI</p>
+    </div>
+    <p class="header-kicker">Papers and Manuscripts</p>
   </header>
 
-  <nav class="tab-nav" aria-label="Portfolio sections">
-    <a class="tab-link" href="index.html">About</a>
-    <a class="tab-link" href="education.html">Education</a>
-    <a class="tab-link" href="experience.html">Experience</a>
-    <a class="tab-link" href="research.html">Research</a>
-    <a class="tab-link active" href="publications.html">Publications</a>
-    <a class="tab-link" href="awards.html">Awards</a>
-    <a class="tab-link" href="connect.html">Connect</a>
-  </nav>
+  <div class="nav-shell">
+    <button class="nav-compact-toggle" type="button" aria-label="Expand or shrink navigation" aria-expanded="true" aria-controls="site-nav">
+      <span class="nav-toggle-icons">
+        <i class="fa-solid fa-bars-staggered"></i>
+        <i class="fa-solid fa-chevron-up"></i>
+      </span>
+      <span class="nav-toggle-text">Shrink Navigation</span>
+    </button>
+
+    <nav class="tab-nav" id="site-nav" aria-label="Portfolio sections">
+      <a class="tab-link" href="index.html"><i class="fa-solid fa-circle-info"></i><span>About</span></a>
+      <a class="tab-link" href="education.html"><i class="fa-solid fa-graduation-cap"></i><span>Education</span></a>
+      <a class="tab-link" href="experience.html"><i class="fa-solid fa-stethoscope"></i><span>Experience</span></a>
+      <a class="tab-link" href="research.html"><i class="fa-solid fa-microscope"></i><span>Research</span></a>
+      <a class="tab-link active" href="publications.html"><i class="fa-solid fa-file-waveform"></i><span>Publications</span></a>
+      <a class="tab-link" href="awards.html"><i class="fa-solid fa-award"></i><span>Awards</span></a>
+      <a class="tab-link" href="connect.html"><i class="fa-solid fa-envelope-open-text"></i><span>Connect</span></a>
+    </nav>
+  </div>
 
   <main class="page-shell">
-    <section class="hero card reveal">
-      <p class="section-label">Selected Work</p>
-      <h2>Publications spanning top-tier conference venues and high-impact journals.</h2>
-      <p>The work emphasizes multimodal fusion strategies, robustness analysis, and practical reliability for healthcare AI systems.</p>
-    </section>
-
-    <section class="publication-grid reveal">
-      <article class="card publication-card tilt-card">
-        <p class="section-label">ICLR 2026</p>
-        <h3>Certified VS. Empirical Adversarial Robustness via Hybrid Convolutions with Attention Stochasticity</h3>
-        <p class="meta">J. Dhar et al.</p>
-        <div class="action-row">
-          <a class="chip" href="https://iclr.cc/" target="_blank" rel="noopener noreferrer">Venue</a>
-          <a class="chip" href="https://arxiv.org/search/?query=Certified+VS.+Empirical+adversarial+robustness+via+hybrid+convolutions+with+attention+stochasticity&searchtype=all" target="_blank" rel="noopener noreferrer">arXiv</a>
-          <a class="chip" href="Joy_Dhar_CV.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
-        </div>
-      </article>
-
-      <article class="card publication-card tilt-card">
-        <p class="section-label">SIGKDD 2026</p>
-        <h3>Effective and Robust Multimodal Medical Image Analysis</h3>
-        <p class="meta">J. Dhar et al.</p>
-        <div class="action-row">
-          <a class="chip" href="https://kdd.org/kdd2026/" target="_blank" rel="noopener noreferrer">Venue</a>
-          <a class="chip" href="https://arxiv.org/search/?query=Effective+and+Robust+Multimodal+Medical+Image+Analysis&searchtype=all" target="_blank" rel="noopener noreferrer">arXiv</a>
-          <a class="chip" href="Joy_Dhar_CV.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
-        </div>
-      </article>
-
-      <article class="card publication-card tilt-card">
-        <p class="section-label">WACV 2026</p>
-        <h3>HyPCA-Net: Advancing Multimodal Fusion in Medical Image Analysis</h3>
-        <p class="meta">J. Dhar et al.</p>
-        <div class="action-row">
-          <a class="chip" href="https://wacv.thecvf.com/" target="_blank" rel="noopener noreferrer">Venue</a>
-          <a class="chip" href="https://arxiv.org/search/?query=HyPCA-Net+Advancing+Multimodal+Fusion+in+Medical+Image+Analysis&searchtype=all" target="_blank" rel="noopener noreferrer">arXiv</a>
-          <a class="chip" href="Joy_Dhar_CV.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
-        </div>
-      </article>
-
-      <article class="card publication-card tilt-card">
-        <p class="section-label">WACV 2025</p>
-        <h3>Multimodal Fusion Learning with Dual Attention for Medical Imaging</h3>
-        <p class="meta">J. Dhar et al.</p>
-        <div class="action-row">
-          <a class="chip" href="https://wacv.thecvf.com/" target="_blank" rel="noopener noreferrer">Venue</a>
-          <a class="chip" href="https://arxiv.org/search/?query=Multimodal+fusion+learning+with+dual+attention+for+medical+imaging&searchtype=all" target="_blank" rel="noopener noreferrer">code</a>
-          <a class="chip" href="Joy_Dhar_CV.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
-        </div>
-      </article>
-
-      <article class="card publication-card tilt-card">
-        <p class="section-label">Information Fusion (2026)</p>
-        <h3>Journal Paper, Volume 127</h3>
-        <p class="meta">J. Dhar et al.</p>
-        <div class="action-row">
-          <a class="chip" href="https://www.sciencedirect.com/journal/information-fusion" target="_blank" rel="noopener noreferrer">Journal</a>
-          <a class="chip" href="https://scholar.google.com/scholar?q=J+Dhar+Information+Fusion+127+2026" target="_blank" rel="noopener noreferrer">Scholar</a>
-          <a class="chip" href="Joy_Dhar_CV.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
-        </div>
-      </article>
-
-      <article class="card publication-card tilt-card">
-        <p class="section-label">Applied Soft Computing (2025)</p>
-        <h3>Journal Paper, Volume 169</h3>
-        <p class="meta">J. Dhar et al.</p>
-        <div class="action-row">
-          <a class="chip" href="https://www.sciencedirect.com/journal/applied-soft-computing" target="_blank" rel="noopener noreferrer">Journal</a>
-          <a class="chip" href="https://scholar.google.com/scholar?q=J+Dhar+Applied+Soft+Computing+169+2025" target="_blank" rel="noopener noreferrer">Scholar</a>
-          <a class="chip" href="Joy_Dhar_CV.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
-        </div>
-      </article>
-    </section>
-
-    <section class="grid-two reveal">
-      <article class="card">
-        <p class="section-label">Current Projects</p>
-        <h3>Devising Hybrid Space Aware Attention for Multimodal Fusion</h3>
-      </article>
-      <article class="card">
-        <p class="section-label">Current Projects</p>
-        <h3>Robust-Zero: A Defense Framework for Zero-Shot Classification</h3>
-      </article>
-    </section>
-
-    <section class="card reveal viz-card">
-      <p class="section-label">Research Signal</p>
-      <h3>Visualization of focus intensity across active research dimensions</h3>
-      <div class="signal-grid">
-        <div class="signal-item">
-          <span>Multimodal Fusion</span>
-          <div class="meter"><i style="--value: 94%"></i></div>
-        </div>
-        <div class="signal-item">
-          <span>Robustness</span>
-          <div class="meter"><i style="--value: 91%"></i></div>
-        </div>
-        <div class="signal-item">
-          <span>Efficiency</span>
-          <div class="meter"><i style="--value: 87%"></i></div>
-        </div>
-        <div class="signal-item">
-          <span>Clinical Applicability</span>
-          <div class="meter"><i style="--value: 89%"></i></div>
+    <section class="hero card reveal scan-card">
+      <div class="card-head">
+        <span class="icon-badge"><i class="fa-solid fa-file-waveform"></i></span>
+        <div>
+          <p class="section-label">Publications</p>
+          <h2>Research output spanning accepted conference papers, journal articles, and active 2026 submission cycles.</h2>
         </div>
       </div>
+      <p>The publication record centers on multimodal fusion, adversarial robustness, medical image analysis, and reliable AI for healthcare data.</p>
+    </section>
+
+    <section class="grid-three reveal">
+      <article class="card kpi scan-card">
+        <p class="section-label">Conference</p>
+        <strong>6</strong>
+        <span>Accepted or published conference papers listed in the CV.</span>
+      </article>
+      <article class="card kpi scan-card">
+        <p class="section-label">Journal</p>
+        <strong>7</strong>
+        <span>Accepted or published journal papers across information fusion and applied AI venues.</span>
+      </article>
+      <article class="card kpi scan-card">
+        <p class="section-label">Under Review</p>
+        <strong>10</strong>
+        <span>Conference and journal manuscripts currently under review.</span>
+      </article>
+    </section>
+
+    <section class="publication-section reveal">
+      <article class="card scan-card">
+        <div class="card-head">
+          <span class="icon-badge"><i class="fa-solid fa-users-viewfinder"></i></span>
+          <div>
+            <p class="section-label">Conference Publications</p>
+            <h3>Accepted papers and peer-reviewed conference outputs</h3>
+          </div>
+        </div>
+        <ol class="publication-list">
+          <li>
+            <strong>Certified vs. Empirical Adversarial Robustness via Hybrid Convolutions with Attention Stochasticity</strong>
+            <p class="meta">J. Dhar, S. Xia, M. Pandey, M. Haghighat, A. Alavi, F. Sohel, W. Zhang, and N. Zaidi | ICLR 2026 | Accepted</p>
+            <div class="action-row">
+              <a class="chip" href="https://iclr.cc/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i><span>Paper</span></a>
+              <span class="chip chip-muted"><i class="fa-brands fa-github"></i><span>Code Soon</span></span>
+              <a class="chip" href="https://arxiv.org/search/?query=Certified+vs.+Empirical+Adversarial+Robustness+via+Hybrid+Convolutions+with+Attention+Stochasticity&searchtype=all" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-box-archive"></i><span>arXiv</span></a>
+            </div>
+          </li>
+          <li>
+            <strong>Effective and Robust Multimodal Medical Image Analysis</strong>
+            <p class="meta">J. Dhar, N. Zaidi, and M. Haghighat | ACM SIGKDD 2026 | Accepted</p>
+            <div class="action-row">
+              <a class="chip" href="https://kdd.org/kdd2026/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i><span>Paper</span></a>
+              <span class="chip chip-muted"><i class="fa-brands fa-github"></i><span>Code Soon</span></span>
+              <a class="chip" href="https://arxiv.org/search/?query=Effective+and+Robust+Multimodal+Medical+Image+Analysis&searchtype=all" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-box-archive"></i><span>arXiv</span></a>
+            </div>
+          </li>
+          <li>
+            <strong>HyPCA-Net: Advancing Multimodal Fusion in Medical Image Analysis</strong>
+            <p class="meta">J. Dhar, M. Pandey, D. Chakladar, M. Haghighat, A. Alavi, S. Mistry, and N. Zaidi | WACV 2026 | Accepted</p>
+            <div class="action-row">
+              <a class="chip" href="https://wacv.thecvf.com/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i><span>Paper</span></a>
+              <span class="chip chip-muted"><i class="fa-brands fa-github"></i><span>Code Soon</span></span>
+              <a class="chip" href="https://arxiv.org/search/?query=HyPCA-Net+Advancing+Multimodal+Fusion+in+Medical+Image+Analysis&searchtype=all" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-box-archive"></i><span>arXiv</span></a>
+            </div>
+          </li>
+          <li>
+            <strong>Multimodal Fusion Learning with Dual Attention for Medical Imaging</strong>
+            <p class="meta">J. Dhar, N. Zaidi, M. Haghighat, S. Roy, P. Goyal, A. Alavi, and V. Kumar | WACV 2025 | pp. 4362-4371</p>
+            <div class="action-row">
+              <a class="chip" href="https://doi.org/10.1109/WACV61041.2025.00428" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i><span>Paper</span></a>
+              <span class="chip chip-muted"><i class="fa-brands fa-github"></i><span>Code Soon</span></span>
+              <a class="chip" href="https://arxiv.org/search/?query=Multimodal+Fusion+Learning+with+Dual+Attention+for+Medical+Imaging&searchtype=all" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-box-archive"></i><span>arXiv</span></a>
+            </div>
+          </li>
+          <li>
+            <strong>Uncertainty-Aware Robust Information Fusion Attention Network for Brain Tumors Classification in MRI Images</strong>
+            <p class="meta">J. Dhar, K. Rana, and P. Goyal | ICPR 2024 | pp. 311-327</p>
+            <div class="action-row">
+              <a class="chip" href="https://doi.org/10.1007/978-3-031-78398-2_21" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i><span>Paper</span></a>
+              <span class="chip chip-muted"><i class="fa-brands fa-github"></i><span>Code Soon</span></span>
+              <a class="chip" href="https://arxiv.org/search/?query=Uncertainty-Aware+Robust+Information+Fusion+Attention+Network+for+Brain+Tumors+Classification+in+MRI+Images&searchtype=all" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-box-archive"></i><span>arXiv</span></a>
+            </div>
+          </li>
+          <li>
+            <strong>PiExtract: An End-to-End Data Extraction Pipeline for Pie Charts</strong>
+            <p class="meta">M. S. Kanroo, H. S. Kawoosa, J. Dhar, and P. Goyal | ICPR 2024 | pp. 31-46</p>
+            <div class="action-row">
+              <a class="chip" href="https://doi.org/10.1007/978-3-031-78122-3_3" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i><span>Paper</span></a>
+              <span class="chip chip-muted"><i class="fa-brands fa-github"></i><span>Code Soon</span></span>
+              <a class="chip" href="https://arxiv.org/search/?query=PiExtract+An+End-to-End+Data+Extraction+Pipeline+for+Pie+Charts&searchtype=all" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-box-archive"></i><span>arXiv</span></a>
+            </div>
+          </li>
+        </ol>
+      </article>
+
+      <article class="card scan-card">
+        <div class="card-head">
+          <span class="icon-badge"><i class="fa-solid fa-book-medical"></i></span>
+          <div>
+            <p class="section-label">Journal Publications</p>
+            <h3>Journal work in reliable AI and medical data analysis</h3>
+          </div>
+        </div>
+        <ol class="publication-list">
+          <li>
+            <strong>Towards Building Robust Models for Unimodal and Multimodal Medical Imaging Data</strong>
+            <p class="meta">J. Dhar, P. Goyal, M. Haghighat, N. Zaidi, F. Sohel, Q. B. Vo, and K. C. Santosh | Information Fusion, vol. 127, March 2026</p>
+            <div class="action-row">
+              <a class="chip" href="https://doi.org/10.1016/j.inffus.2025.103822" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i><span>Paper</span></a>
+              <span class="chip chip-muted"><i class="fa-brands fa-github"></i><span>Code Soon</span></span>
+              <a class="chip" href="https://arxiv.org/search/?query=Towards+Building+Robust+Models+for+Unimodal+and+Multimodal+Medical+Imaging+Data&searchtype=all" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-box-archive"></i><span>arXiv</span></a>
+            </div>
+          </li>
+          <li>
+            <strong>Dual-Phase Neural Networks for Feature Extraction and Ensemble Learning for Recognizing Human Health Activities</strong>
+            <p class="meta">J. Dhar, K. Rana, P. Goyal, A. Alavi, R. Rana, Q. B. Vo, S. Mishra, and S. Mistry | Applied Soft Computing, vol. 169, Jan. 2025</p>
+            <div class="action-row">
+              <a class="chip" href="https://doi.org/10.1016/j.asoc.2024.112550" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i><span>Paper</span></a>
+              <span class="chip chip-muted"><i class="fa-brands fa-github"></i><span>Code Soon</span></span>
+              <a class="chip" href="https://arxiv.org/search/?query=Dual-Phase+Neural+Networks+for+Feature+Extraction+and+Ensemble+Learning+for+Recognizing+Human+Health+Activities&searchtype=all" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-box-archive"></i><span>arXiv</span></a>
+            </div>
+          </li>
+          <li>
+            <strong>Identification and Diagnosis of Cervical Cancer Using a Hybrid Feature Selection Approach with the Bayesian Optimization-Based Optimized CatBoost Classification Algorithm</strong>
+            <p class="meta">J. Dhar and S. Roy | Journal of Ambient Intelligence and Humanized Computing, vol. 15, Jun. 2024</p>
+            <div class="action-row">
+              <a class="chip" href="https://doi.org/10.1007/s12652-024-04825-8" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i><span>Paper</span></a>
+              <span class="chip chip-muted"><i class="fa-brands fa-github"></i><span>Code Soon</span></span>
+              <a class="chip" href="https://arxiv.org/search/?query=Identification+and+Diagnosis+of+Cervical+Cancer+Using+a+Hybrid+Feature+Selection+Approach+with+the+Bayesian+Optimization-Based+Optimized+CatBoost+Classification+Algorithm&searchtype=all" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-box-archive"></i><span>arXiv</span></a>
+            </div>
+          </li>
+          <li>
+            <strong>An Adaptive Intelligent Diagnostic System to Predict Early Stage of Parkinson's Disease Using Two-Stage Dimension Reduction with Genetically Optimized LightGBM Algorithm</strong>
+            <p class="meta">J. Dhar | Neural Computing and Applications, vol. 34, no. 6, Jun. 2022</p>
+            <div class="action-row">
+              <a class="chip" href="https://doi.org/10.1007/s00521-021-06612-4" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i><span>Paper</span></a>
+              <span class="chip chip-muted"><i class="fa-brands fa-github"></i><span>Code Soon</span></span>
+              <a class="chip" href="https://arxiv.org/search/?query=An+Adaptive+Intelligent+Diagnostic+System+to+Predict+Early+Stage+of+Parkinson%27s+Disease+Using+Two-Stage+Dimension+Reduction+with+Genetically+Optimized+LightGBM+Algorithm&searchtype=all" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-box-archive"></i><span>arXiv</span></a>
+            </div>
+          </li>
+          <li>
+            <strong>Multi-Tier Ensemble Learning Model with Neighborhood Component Analysis to Predict Health Diseases</strong>
+            <p class="meta">J. Dhar and N. A. Ayele | IEEE Access, vol. 9, 2021</p>
+            <div class="action-row">
+              <a class="chip" href="https://doi.org/10.1109/ACCESS.2021.3117963" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i><span>Paper</span></a>
+              <span class="chip chip-muted"><i class="fa-brands fa-github"></i><span>Code Soon</span></span>
+              <a class="chip" href="https://arxiv.org/search/?query=Multi-Tier+Ensemble+Learning+Model+with+Neighborhood+Component+Analysis+to+Predict+Health+Diseases&searchtype=all" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-box-archive"></i><span>arXiv</span></a>
+            </div>
+          </li>
+          <li>
+            <strong>Multistage Ensemble Learning Model with Weighted Voting and Genetic Algorithm Optimization Strategy for Detecting Chronic Obstructive Pulmonary Disease</strong>
+            <p class="meta">J. Dhar | IEEE Access, vol. 9, 2021</p>
+            <div class="action-row">
+              <a class="chip" href="https://doi.org/10.1109/ACCESS.2021.3067949" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i><span>Paper</span></a>
+              <span class="chip chip-muted"><i class="fa-brands fa-github"></i><span>Code Soon</span></span>
+              <a class="chip" href="https://arxiv.org/search/?query=Multistage+Ensemble+Learning+Model+with+Weighted+Voting+and+Genetic+Algorithm+Optimization+Strategy+for+Detecting+Chronic+Obstructive+Pulmonary+Disease&searchtype=all" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-box-archive"></i><span>arXiv</span></a>
+            </div>
+          </li>
+          <li>
+            <strong>An Effective Recommendation System to Forecast the Best Educational Program Using Machine Learning Classification Algorithms</strong>
+            <p class="meta">J. Dhar and A. K. Jodder | Ingenierie des Systemes d'Information, vol. 25, no. 5, Nov. 2020</p>
+            <div class="action-row">
+              <a class="chip" href="https://doi.org/10.18280/isi.250502" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i><span>Paper</span></a>
+              <span class="chip chip-muted"><i class="fa-brands fa-github"></i><span>Code Soon</span></span>
+              <a class="chip" href="https://arxiv.org/search/?query=An+Effective+Recommendation+System+to+Forecast+the+Best+Educational+Program+Using+Machine+Learning+Classification+Algorithms&searchtype=all" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-box-archive"></i><span>arXiv</span></a>
+            </div>
+          </li>
+        </ol>
+      </article>
+
+      <article class="card scan-card">
+        <div class="card-head">
+          <span class="icon-badge"><i class="fa-solid fa-hourglass-half"></i></span>
+          <div>
+            <p class="section-label">Manuscripts Under Review</p>
+            <h3>2026 submission pipeline with explicit link, code, and arXiv slots</h3>
+          </div>
+        </div>
+        <ol class="publication-list">
+          <li>
+            <strong>Does a Hybrid Space-Aware Randomized Defense Improve Empirical and Certified Adversarial Robustness?</strong>
+            <p class="meta">Submitted to ICML 2026</p>
+            <div class="action-row">
+              <span class="chip chip-muted"><i class="fa-solid fa-link"></i><span>Paper Pending</span></span>
+              <span class="chip chip-muted"><i class="fa-brands fa-github"></i><span>Code Pending</span></span>
+              <a class="chip" href="https://arxiv.org/search/?query=Does+a+Hybrid+Space-Aware+Randomized+Defense+Improve+Empirical+and+Certified+Adversarial+Robustness&searchtype=all" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-box-archive"></i><span>arXiv</span></a>
+            </div>
+          </li>
+          <li>
+            <strong>DEMAnD: Redefining Decoder Design to Advance Medical Image Segmentation</strong>
+            <p class="meta">Submitted to KDD 2026</p>
+            <div class="action-row">
+              <span class="chip chip-muted"><i class="fa-solid fa-link"></i><span>Paper Pending</span></span>
+              <span class="chip chip-muted"><i class="fa-brands fa-github"></i><span>Code Pending</span></span>
+              <a class="chip" href="https://arxiv.org/search/?query=DEMAnD+Redefining+Decoder+Design+to+Advance+Medical+Image+Segmentation&searchtype=all" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-box-archive"></i><span>arXiv</span></a>
+            </div>
+          </li>
+          <li>
+            <strong>Advancing Multimodal Fusion on Heterogeneous Medical Data with Hybrid Geometry Attention</strong>
+            <p class="meta">Submitted to KDD 2026</p>
+            <div class="action-row">
+              <span class="chip chip-muted"><i class="fa-solid fa-link"></i><span>Paper Pending</span></span>
+              <span class="chip chip-muted"><i class="fa-brands fa-github"></i><span>Code Pending</span></span>
+              <a class="chip" href="https://arxiv.org/search/?query=Advancing+Multimodal+Fusion+on+Heterogeneous+Medical+Data+with+Hybrid+Geometry+Attention&searchtype=all" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-box-archive"></i><span>arXiv</span></a>
+            </div>
+          </li>
+          <li>
+            <strong>Proximity-Constrained Counterfactual Decoding for Hallucination-Robust Medical VQA</strong>
+            <p class="meta">Submitted to ECCV 2026</p>
+            <div class="action-row">
+              <span class="chip chip-muted"><i class="fa-solid fa-link"></i><span>Paper Pending</span></span>
+              <span class="chip chip-muted"><i class="fa-brands fa-github"></i><span>Code Pending</span></span>
+              <a class="chip" href="https://arxiv.org/search/?query=Proximity-Constrained+Counterfactual+Decoding+for+Hallucination-Robust+Medical+VQA&searchtype=all" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-box-archive"></i><span>arXiv</span></a>
+            </div>
+          </li>
+          <li>
+            <strong>Can Multimodal Fusion of Heterogeneous Medical Data Accelerate Convergence?</strong>
+            <p class="meta">Submitted to ECCV 2026</p>
+            <div class="action-row">
+              <span class="chip chip-muted"><i class="fa-solid fa-link"></i><span>Paper Pending</span></span>
+              <span class="chip chip-muted"><i class="fa-brands fa-github"></i><span>Code Pending</span></span>
+              <a class="chip" href="https://arxiv.org/search/?query=Can+Multimodal+Fusion+of+Heterogeneous+Medical+Data+Accelerate+Convergence&searchtype=all" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-box-archive"></i><span>arXiv</span></a>
+            </div>
+          </li>
+          <li>
+            <strong>GCARE: Advancing Multimodal Fusion on Heterogeneous Medical Data</strong>
+            <p class="meta">Submitted to ECCV 2026</p>
+            <div class="action-row">
+              <span class="chip chip-muted"><i class="fa-solid fa-link"></i><span>Paper Pending</span></span>
+              <span class="chip chip-muted"><i class="fa-brands fa-github"></i><span>Code Pending</span></span>
+              <a class="chip" href="https://arxiv.org/search/?query=GCARE+Advancing+Multimodal+Fusion+on+Heterogeneous+Medical+Data&searchtype=all" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-box-archive"></i><span>arXiv</span></a>
+            </div>
+          </li>
+          <li>
+            <strong>CoVANT: Advancing Multimodal Fusion on Heterogeneous Medical Data</strong>
+            <p class="meta">Submitted to NeurIPS 2026</p>
+            <div class="action-row">
+              <span class="chip chip-muted"><i class="fa-solid fa-link"></i><span>Paper Pending</span></span>
+              <span class="chip chip-muted"><i class="fa-brands fa-github"></i><span>Code Pending</span></span>
+              <a class="chip" href="https://arxiv.org/search/?query=CoVANT+Advancing+Multimodal+Fusion+on+Heterogeneous+Medical+Data&searchtype=all" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-box-archive"></i><span>arXiv</span></a>
+            </div>
+          </li>
+          <li>
+            <strong>GSAND: Hybrid-Space Attention Advances Medical Image Segmentation</strong>
+            <p class="meta">Submitted to NeurIPS 2026</p>
+            <div class="action-row">
+              <span class="chip chip-muted"><i class="fa-solid fa-link"></i><span>Paper Pending</span></span>
+              <span class="chip chip-muted"><i class="fa-brands fa-github"></i><span>Code Pending</span></span>
+              <a class="chip" href="https://arxiv.org/search/?query=GSAND+Hybrid-Space+Attention+Advances+Medical+Image+Segmentation&searchtype=all" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-box-archive"></i><span>arXiv</span></a>
+            </div>
+          </li>
+          <li>
+            <strong>Certified vs. Empirical Adversarial Robustness in Multimodal Fusion via Hybrid Space Convolutional Stochasticity</strong>
+            <p class="meta">Submitted to NeurIPS 2026</p>
+            <div class="action-row">
+              <span class="chip chip-muted"><i class="fa-solid fa-link"></i><span>Paper Pending</span></span>
+              <span class="chip chip-muted"><i class="fa-brands fa-github"></i><span>Code Pending</span></span>
+              <a class="chip" href="https://arxiv.org/search/?query=Certified+vs.+Empirical+Adversarial+Robustness+in+Multimodal+Fusion+via+Hybrid+Space+Convolutional+Stochasticity&searchtype=all" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-box-archive"></i><span>arXiv</span></a>
+            </div>
+          </li>
+          <li>
+            <strong>MANAT: Multimodal Attention Noise Injection with Adversarial Training for Adversarial Robustness in Medical Image Analysis</strong>
+            <p class="meta">Submitted to Applied Soft Computing</p>
+            <div class="action-row">
+              <span class="chip chip-muted"><i class="fa-solid fa-link"></i><span>Paper Pending</span></span>
+              <span class="chip chip-muted"><i class="fa-brands fa-github"></i><span>Code Pending</span></span>
+              <a class="chip" href="https://arxiv.org/search/?query=MANAT+Multimodal+Attention+Noise+Injection+with+Adversarial+Training+for+Adversarial+Robustness+in+Medical+Image+Analysis&searchtype=all" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-box-archive"></i><span>arXiv</span></a>
+            </div>
+          </li>
+        </ol>
+      </article>
     </section>
   </main>
 
   <footer class="site-footer" aria-label="Site footer">
     <div class="footer-grid">
+      <section class="footer-block footer-brand">
+        <div class="footer-emblem"><i class="fa-solid fa-dna"></i></div>
+        <p class="footer-title">Joy Dhar</p>
+        <p>Publication themes include multimodal medical AI, adversarial robustness, efficient learning systems, and clinical decision support.</p>
+        <div class="footer-socials">
+          <a href="https://github.com/misti1203" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i><span>GitHub</span></a>
+          <a href="https://www.linkedin.com/in/joy-dhar-42930a248" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i><span>LinkedIn</span></a>
+          <a href="mailto:joy.22csz0003@iitrpr.ac.in"><i class="fa-solid fa-envelope"></i><span>Email</span></a>
+        </div>
+      </section>
+
       <section class="footer-block">
-        <p class="footer-title">Explore</p>
-        <a href="publications.html">Publications</a>
-        <a href="research.html">Research</a>
-        <a href="awards.html">Awards</a>
+        <p class="footer-title">Navigate</p>
+        <a href="research.html"><i class="fa-solid fa-microscope"></i><span>Research</span></a>
+        <a href="experience.html"><i class="fa-solid fa-stethoscope"></i><span>Experience</span></a>
+        <a href="awards.html"><i class="fa-solid fa-award"></i><span>Awards</span></a>
+      </section>
+
+      <section class="footer-block">
+        <p class="footer-title">Paper Actions</p>
+        <a href="publications.html"><i class="fa-solid fa-link"></i><span>Paper Links</span></a>
+        <a href="publications.html"><i class="fa-brands fa-github"></i><span>Code Slots</span></a>
+        <a href="publications.html"><i class="fa-solid fa-box-archive"></i><span>arXiv Slots</span></a>
       </section>
 
       <section class="footer-block">
         <p class="footer-title">Resources</p>
-        <a href="Joy_Dhar_CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
-        <a href="https://github.com/misti1203" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="connect.html">Contact</a>
+        <a href="Joy_Dhar_CV.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-arrow-down"></i><span>Download CV</span></a>
+        <a href="connect.html"><i class="fa-solid fa-address-card"></i><span>Contact</span></a>
+        <a href="research.html"><i class="fa-solid fa-layer-group"></i><span>Research Themes</span></a>
       </section>
     </div>
 
     <div class="footer-meta">
       <p>Copyright &copy; <span class="current-year">2026</span> Joy Dhar. All rights reserved.</p>
-      <p>Built for GitHub Pages | Last updated: Apr 2026</p>
+      <p>Website refreshed on May 12, 2026 from the CV dated April 18, 2026.</p>
     </div>
   </footer>
 

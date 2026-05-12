@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Joy Dhar | Awards">
+  <meta name="description" content="Joy Dhar | Awards, honors, fellowships, and scholarships.">
   <title>Joy Dhar | Awards</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;600;800&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="page-awards">
@@ -15,70 +16,157 @@
   <div class="grain-layer"></div>
 
   <header class="site-header">
-    <a class="brand-mark" href="index.html" aria-label="Home">JD</a>
-    <a class="brand-wordmark" href="index.html">Joy Dhar</a>
-    <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-      <span class="hamburger"></span>
-    </button>
+    <a class="brand-mark" href="index.html" aria-label="Home"><span>JD</span></a>
+    <div class="brand-copy">
+      <a class="brand-wordmark" href="index.html">Joy Dhar</a>
+      <p class="brand-subline">Deep Learning Researcher for Medical Imaging AI</p>
+    </div>
+    <p class="header-kicker">Honors and Fellowships</p>
   </header>
 
-  <nav class="tab-nav" aria-label="Portfolio sections">
-    <a class="tab-link" href="index.html">About</a>
-    <a class="tab-link" href="education.html">Education</a>
-    <a class="tab-link" href="experience.html">Experience</a>
-    <a class="tab-link" href="research.html">Research</a>
-    <a class="tab-link" href="publications.html">Publications</a>
-    <a class="tab-link active" href="awards.html">Awards</a>
-    <a class="tab-link" href="connect.html">Connect</a>
-  </nav>
+  <div class="nav-shell">
+    <button class="nav-compact-toggle" type="button" aria-label="Expand or shrink navigation" aria-expanded="true" aria-controls="site-nav">
+      <span class="nav-toggle-icons">
+        <i class="fa-solid fa-bars-staggered"></i>
+        <i class="fa-solid fa-chevron-up"></i>
+      </span>
+      <span class="nav-toggle-text">Shrink Navigation</span>
+    </button>
+
+    <nav class="tab-nav" id="site-nav" aria-label="Portfolio sections">
+      <a class="tab-link" href="index.html"><i class="fa-solid fa-circle-info"></i><span>About</span></a>
+      <a class="tab-link" href="education.html"><i class="fa-solid fa-graduation-cap"></i><span>Education</span></a>
+      <a class="tab-link" href="experience.html"><i class="fa-solid fa-stethoscope"></i><span>Experience</span></a>
+      <a class="tab-link" href="research.html"><i class="fa-solid fa-microscope"></i><span>Research</span></a>
+      <a class="tab-link" href="publications.html"><i class="fa-solid fa-file-waveform"></i><span>Publications</span></a>
+      <a class="tab-link active" href="awards.html"><i class="fa-solid fa-award"></i><span>Awards</span></a>
+      <a class="tab-link" href="connect.html"><i class="fa-solid fa-envelope-open-text"></i><span>Connect</span></a>
+    </nav>
+  </div>
 
   <main class="page-shell">
-    <section class="hero card reveal">
-      <p class="section-label">Highlights</p>
-      <h2>Recognition for research excellence, innovation, and technical competition performance.</h2>
-      <p>These achievements mark contributions that bridge research quality with practical implementation capability.</p>
+    <section class="hero card reveal scan-card">
+      <div class="card-head">
+        <span class="icon-badge"><i class="fa-solid fa-award"></i></span>
+        <div>
+          <p class="section-label">Awards and Support</p>
+          <h2>Recognition across research travel, international scholarship offers, competitive vision challenges, and national fellowships.</h2>
+        </div>
+      </div>
+      <p>The CV reflects both research visibility and sustained academic support across multiple institutions and countries.</p>
     </section>
 
     <section class="grid-three reveal">
-      <article class="card">
-        <h3>ANRF Travel Fund</h3>
-        <p class="meta">WACV 2025</p>
-        <p>Awarded support for international conference participation.</p>
+      <article class="card scan-card">
+        <div class="card-head">
+          <span class="icon-badge"><i class="fa-solid fa-plane-departure"></i></span>
+          <div>
+            <h3>ANRF Travel Fund Recipient</h3>
+            <p class="meta">2025 | Tucson, USA</p>
+          </div>
+        </div>
+        <p>Travel support to present work at WACV 2025.</p>
       </article>
-      <article class="card">
-        <h3>IEEE VIP Cup Winner</h3>
-        <p class="meta">ICIP 2024</p>
-        <p>Recognized for competitive excellence in vision and image processing challenge.</p>
+
+      <article class="card scan-card">
+        <div class="card-head">
+          <span class="icon-badge"><i class="fa-solid fa-trophy"></i></span>
+          <div>
+            <h3>IEEE Video and Image Processing Cup Winner</h3>
+            <p class="meta">2024 | Abu Dhabi, UAE</p>
+          </div>
+        </div>
+        <p>Winner of the IEEE VIP Cup at ICIP.</p>
       </article>
-      <article class="card">
-        <h3>IBM India TGMC Finalist</h3>
-        <p class="meta">2011</p>
-        <p>Finalist distinction in a large-scale technical innovation competition.</p>
+
+      <article class="card scan-card">
+        <div class="card-head">
+          <span class="icon-badge"><i class="fa-solid fa-lightbulb"></i></span>
+          <div>
+            <h3>IBM India TGMC Finalist</h3>
+            <p class="meta">2011 | Bangalore, India</p>
+          </div>
+        </div>
+        <p>Finalist in The Great Mind Challenge project competition.</p>
+      </article>
+    </section>
+
+    <section class="grid-two reveal">
+      <article class="card scan-card">
+        <div class="card-head">
+          <span class="icon-badge"><i class="fa-solid fa-globe"></i></span>
+          <div>
+            <h3>International Scholarships and Offers</h3>
+            <p class="card-subline">Global recognition across doctoral opportunities.</p>
+          </div>
+        </div>
+        <ul class="list-tight">
+          <li>Deakin University Postgraduate Research Scholarship, Deakin University, 2022</li>
+          <li>Industrial Scholarship for Ph.D., University of Genoa, 2022</li>
+          <li>Ph.D. Institute Scholarship, University of Salerno, 2022</li>
+          <li>JCU Postgraduate Research Stipend Scholarship, James Cook University, 2022</li>
+          <li>Ph.D. Institute Scholarship, National Taipei University of Technology, 2021</li>
+          <li>Ph.D. Institute Scholarship, National Dong Hwa University, 2021</li>
+          <li>Elite Doctoral Scholarship, National Sun Yat-sen University, 2021</li>
+        </ul>
+      </article>
+
+      <article class="card scan-card">
+        <div class="card-head">
+          <span class="icon-badge"><i class="fa-solid fa-flag"></i></span>
+          <div>
+            <h3>Domestic Scholarships and Fellowships</h3>
+            <p class="card-subline">National support through competitive academic stages.</p>
+          </div>
+        </div>
+        <ul class="list-tight">
+          <li>Institute Scholarship, Indian Institute of Technology Dhanbad, 2022</li>
+          <li>Institute Scholarship, Indian Institute of Technology Ropar, 2022</li>
+          <li>NET Fellowship, NTA-UGC, 2019</li>
+          <li>GATE Fellowship, M.H.R.D., 2018</li>
+        </ul>
       </article>
     </section>
   </main>
 
   <footer class="site-footer" aria-label="Site footer">
     <div class="footer-grid">
+      <section class="footer-block footer-brand">
+        <div class="footer-emblem"><i class="fa-solid fa-dna"></i></div>
+        <p class="footer-title">Joy Dhar</p>
+        <p>Recognition spanning competitive computer vision, research travel support, and doctoral scholarship pathways.</p>
+        <div class="footer-socials">
+          <a href="https://github.com/misti1203" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i><span>GitHub</span></a>
+          <a href="https://www.linkedin.com/in/joy-dhar-42930a248" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i><span>LinkedIn</span></a>
+          <a href="mailto:joy.22csz0003@iitrpr.ac.in"><i class="fa-solid fa-envelope"></i><span>Email</span></a>
+        </div>
+      </section>
 
       <section class="footer-block">
-        <p class="footer-title">Explore</p>
-        <a href="awards.html">Awards</a>
-        <a href="publications.html">Publications</a>
-        <a href="research.html">Research</a>
+        <p class="footer-title">Navigate</p>
+        <a href="publications.html"><i class="fa-solid fa-file-waveform"></i><span>Publications</span></a>
+        <a href="research.html"><i class="fa-solid fa-microscope"></i><span>Research</span></a>
+        <a href="experience.html"><i class="fa-solid fa-stethoscope"></i><span>Experience</span></a>
+      </section>
+
+      <section class="footer-block">
+        <p class="footer-title">Recognition Types</p>
+        <a href="awards.html"><i class="fa-solid fa-plane-departure"></i><span>Travel Awards</span></a>
+        <a href="awards.html"><i class="fa-solid fa-globe"></i><span>International Offers</span></a>
+        <a href="awards.html"><i class="fa-solid fa-flag"></i><span>Domestic Fellowships</span></a>
       </section>
 
       <section class="footer-block">
         <p class="footer-title">Resources</p>
-        <a href="Joy_Dhar_CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
-        <a href="experience.html">Experience</a>
-        <a href="connect.html">Contact</a>
+        <a href="Joy_Dhar_CV.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-arrow-down"></i><span>Download CV</span></a>
+        <a href="education.html"><i class="fa-solid fa-graduation-cap"></i><span>Education</span></a>
+        <a href="connect.html"><i class="fa-solid fa-address-card"></i><span>Contact</span></a>
       </section>
     </div>
 
     <div class="footer-meta">
       <p>Copyright &copy; <span class="current-year">2026</span> Joy Dhar. All rights reserved.</p>
-      <p>Built for GitHub Pages | Last updated: Apr 2026</p>
+      <p>Website refreshed on May 12, 2026 from the CV dated April 18, 2026.</p>
     </div>
   </footer>
 

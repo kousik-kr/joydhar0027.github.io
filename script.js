@@ -1,56 +1,59 @@
-const tabLinks = Array.from(document.querySelectorAll('.tab-link'));
 const years = Array.from(document.querySelectorAll('.current-year'));
+const tabLinks = Array.from(document.querySelectorAll('.tab-link'));
+const navShell = document.querySelector('.nav-shell');
+const navToggle = document.querySelector('.nav-compact-toggle');
+const tabNav = document.querySelector('.tab-nav');
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-const now = new Date().getFullYear();
 years.forEach((yearNode) => {
-  yearNode.textContent = String(now);
+  yearNode.textContent = String(new Date().getFullYear());
 });
 
-// Enable smooth scroll behavior
-document.documentElement.style.scrollBehavior = 'smooth';
+document.documentElement.style.scrollBehavior = prefersReducedMotion ? 'auto' : 'smooth';
 
-// Menu Toggle
-const menuToggle = document.querySelector('.menu-toggle');
-const tabNav = document.querySelector('.tab-nav');
+function setNavCollapsed(collapsed) {
+  if (!navShell || !navToggle || !tabNav) {
+    return;
+  }
 
-if (menuToggle && tabNav) {
-  menuToggle.addEventListener('click', () => {
-    const isOpen = menuToggle.classList.toggle('active');
-    menuToggle.setAttribute('aria-expanded', String(isOpen));
-    tabNav.classList.toggle('dropdown-open');
+  navShell.classList.toggle('is-collapsed', collapsed);
+  navToggle.setAttribute('aria-expanded', String(!collapsed));
+
+  const textNode = navToggle.querySelector('.nav-toggle-text');
+  if (textNode) {
+    textNode.textContent = collapsed ? 'Expand Navigation' : 'Shrink Navigation';
+  }
+}
+
+if (navShell && navToggle && tabNav) {
+  const storedPreference = window.localStorage.getItem('navCollapsed');
+  const defaultCollapsed = storedPreference === null ? window.innerWidth < 760 : storedPreference === 'true';
+  setNavCollapsed(defaultCollapsed);
+
+  navToggle.addEventListener('click', () => {
+    const collapsed = !navShell.classList.contains('is-collapsed');
+    setNavCollapsed(collapsed);
+    window.localStorage.setItem('navCollapsed', String(collapsed));
   });
 
-  // Close dropdown when a tab link is clicked
   tabLinks.forEach((link) => {
     link.addEventListener('click', () => {
-      menuToggle.classList.remove('active');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      tabNav.classList.remove('dropdown-open');
+      if (window.innerWidth < 760) {
+        setNavCollapsed(true);
+        window.localStorage.setItem('navCollapsed', 'true');
+      }
     });
   });
 
-  // Close dropdown when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!menuToggle.contains(e.target) && !tabNav.contains(e.target)) {
-      menuToggle.classList.remove('active');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      tabNav.classList.remove('dropdown-open');
-    }
-  });
-
-  // Close dropdown on Escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      menuToggle.classList.remove('active');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      tabNav.classList.remove('dropdown-open');
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !navShell.classList.contains('is-collapsed')) {
+      setNavCollapsed(true);
+      window.localStorage.setItem('navCollapsed', 'true');
     }
   });
 }
 
 tabLinks.forEach((link, index) => {
-  link.setAttribute('role', 'link');
-
   link.addEventListener('keydown', (event) => {
     if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') {
       return;
@@ -71,6 +74,10 @@ document.body.appendChild(rail);
 const fill = rail.querySelector('.progress-fill');
 
 function updateProgress() {
+  if (!fill) {
+    return;
+  }
+
   const scrollTop = window.scrollY;
   const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
   const ratio = scrollHeight > 0 ? Math.min(1, scrollTop / scrollHeight) : 0;
@@ -82,69 +89,53 @@ updateProgress();
 
 const revealItems = Array.from(document.querySelectorAll('.reveal'));
 
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-      }
-    });
-  },
-  { threshold: 0.15 }\n);
-);
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
 
-revealItems.forEach((item) => revealObserver.observe(item));
+  revealItems.forEach((item) => revealObserver.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add('in-view'));
+}
 
-const tiltCards = Array.from(document.querySelectorAll('.tilt-card'));
-
-tiltCards.forEach((card) => {
-  card.addEventListener('mousemove', (event) => {
-    const rect = card.getBoundingClientRect();
-    const x = event.clientX - rect.left;
-    const y = event.clientY - rect.top;
-    const rx = ((y / rect.height) - 0.5) * -3;
-    const ry = ((x / rect.width) - 0.5) * 3;
-
-    card.style.transform = `perspective(1200px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(8px) scale(1.01)`;
-  });
-
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = 'perspective(1200px) rotateX(0) rotateY(0) translateZ(0) scale(1)';
-  });
-});
-
-for (let i = 0; i < 12; i += 1) {
-  const dot = document.createElement('span');
-  dot.className = 'float-dot';
-  dot.style.left = `${Math.random() * 100}%`;
-  dot.style.top = `${Math.random() * 100}%`;
-  dot.style.setProperty('--dur', `${4 + Math.random() * 7}s`);
-  document.body.appendChild(dot);
+if (!prefersReducedMotion) {
+  const dotCount = window.innerWidth < 720 ? 6 : 12;
+  for (let i = 0; i < dotCount; i += 1) {
+    const dot = document.createElement('span');
+    dot.className = 'float-dot';
+    dot.style.left = `${Math.random() * 100}%`;
+    dot.style.top = `${Math.random() * 100}%`;
+    dot.style.setProperty('--dur', `${4 + Math.random() * 7}s`);
+    document.body.appendChild(dot);
+  }
 }
 
 const openingStage = document.querySelector('#opening-stage');
 const openingOrbs = Array.from(document.querySelectorAll('.opening-orb'));
 
-if (openingStage) {
+if (openingStage && !prefersReducedMotion) {
   const openingHeight = openingStage.offsetHeight || 1;
 
   function updateOpeningState() {
     const top = window.scrollY;
     const ratio = Math.min(1, top / openingHeight);
 
-    openingStage.style.opacity = `${1 - ratio * 0.42}`;
-    openingStage.style.transform = `translateY(${ratio * -16}px)`;
+    openingStage.style.opacity = `${1 - ratio * 0.38}`;
+    openingStage.style.transform = `translateY(${ratio * -12}px)`;
 
     openingOrbs.forEach((orb, idx) => {
-      const depth = (idx + 1) * 6;
+      const depth = (idx + 1) * 5;
       orb.style.transform = `translate3d(${ratio * depth}px, ${ratio * -depth}px, 0)`;
     });
-
-    if (top > openingHeight * 0.28) {
-      document.body.classList.add('home-entered');
-    } else {
-      document.body.classList.remove('home-entered');
-    }
   }
 
   window.addEventListener('scroll', updateOpeningState, { passive: true });
