@@ -1,4 +1,4 @@
-const tabLinks = Array.from(document.querySelectorAll('.tab-link'));
+const sideLinks = Array.from(document.querySelectorAll('.side-link'));
 const years = Array.from(document.querySelectorAll('.current-year'));
 
 const now = new Date().getFullYear();
@@ -9,57 +9,70 @@ years.forEach((yearNode) => {
 // Enable smooth scroll behavior
 document.documentElement.style.scrollBehavior = 'smooth';
 
-// Menu Toggle
-const menuToggle = document.querySelector('.menu-toggle');
-const tabNav = document.querySelector('.tab-nav');
+// Sidebar toggle and active page state
+const sideNav = document.querySelector('#sideNav');
+const sideNavToggle = document.querySelector('#sideNavToggle');
+const sideNavStorageKey = 'joyDharSideNavCollapsed';
 
-if (menuToggle && tabNav) {
-  menuToggle.addEventListener('click', () => {
-    const isOpen = menuToggle.classList.toggle('active');
-    menuToggle.setAttribute('aria-expanded', String(isOpen));
-    tabNav.classList.toggle('dropdown-open');
+function setSideNavState(isCollapsed, shouldPersist = true) {
+  document.body.classList.toggle('nav-collapsed', isCollapsed);
+
+  if (sideNav) {
+    sideNav.classList.toggle('collapsed', isCollapsed);
+    sideNav.classList.toggle('expanded', !isCollapsed);
+  }
+
+  if (sideNavToggle) {
+    sideNavToggle.setAttribute('aria-expanded', String(!isCollapsed));
+    sideNavToggle.setAttribute(
+      'aria-label',
+      isCollapsed ? 'Expand side navigation' : 'Collapse side navigation'
+    );
+  }
+
+  if (shouldPersist) {
+    localStorage.setItem(sideNavStorageKey, String(isCollapsed));
+  }
+}
+
+if (sideNav && sideNavToggle) {
+  const savedState = localStorage.getItem(sideNavStorageKey);
+  const startsCollapsed = savedState === 'true' || (!savedState && window.innerWidth <= 760);
+  setSideNavState(startsCollapsed, false);
+
+  sideNavToggle.addEventListener('click', () => {
+    setSideNavState(!document.body.classList.contains('nav-collapsed'));
   });
 
-  // Close dropdown when a tab link is clicked
-  tabLinks.forEach((link) => {
-    link.addEventListener('click', () => {
-      menuToggle.classList.remove('active');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      tabNav.classList.remove('dropdown-open');
-    });
-  });
-
-  // Close dropdown when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!menuToggle.contains(e.target) && !tabNav.contains(e.target)) {
-      menuToggle.classList.remove('active');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      tabNav.classList.remove('dropdown-open');
-    }
-  });
-
-  // Close dropdown on Escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      menuToggle.classList.remove('active');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      tabNav.classList.remove('dropdown-open');
+  window.addEventListener('resize', () => {
+    if (window.innerWidth <= 560 && localStorage.getItem(sideNavStorageKey) === null) {
+      setSideNavState(true, false);
     }
   });
 }
 
-tabLinks.forEach((link, index) => {
-  link.setAttribute('role', 'link');
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+sideLinks.forEach((link, index) => {
+  const linkPage = link.getAttribute('href');
+
+  if (linkPage === currentPage) {
+    link.classList.add('active');
+    link.setAttribute('aria-current', 'page');
+  } else {
+    link.classList.remove('active');
+    link.removeAttribute('aria-current');
+  }
 
   link.addEventListener('keydown', (event) => {
-    if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') {
+    if (event.key !== 'ArrowDown' && event.key !== 'ArrowUp') {
       return;
     }
 
     event.preventDefault();
-    const step = event.key === 'ArrowRight' ? 1 : -1;
-    const next = (index + step + tabLinks.length) % tabLinks.length;
-    tabLinks[next].focus();
+    const step = event.key === 'ArrowDown' ? 1 : -1;
+    const next = (index + step + sideLinks.length) % sideLinks.length;
+    sideLinks[next].focus();
   });
 });
 
@@ -90,7 +103,7 @@ const revealObserver = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.15 }\n);
+  { threshold: 0.15 }
 );
 
 revealItems.forEach((item) => revealObserver.observe(item));
