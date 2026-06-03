@@ -3,163 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Joy Dhar | Contact details, collaboration interests, and professional profiles.">
+  <meta name="description" content="Joy Dhar | Connect">
   <title>Joy Dhar | Connect</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;600;800&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="page-connect">
   <div class="atmosphere"></div>
   <div class="grain-layer"></div>
 
-  <header class="site-header">
-    <a class="brand-mark" href="index.html" aria-label="Home"><span>JD</span></a>
-    <div class="brand-copy">
-      <a class="brand-wordmark" href="index.html">Joy Dhar</a>
-      <p class="brand-subline">Deep Learning Researcher for Medical Imaging AI</p>
-    </div>
-    <p class="header-kicker">Get in Touch</p>
-  </header>
-
-  <div class="nav-shell">
-    <button class="nav-compact-toggle" type="button" aria-label="Expand or shrink navigation" aria-expanded="true" aria-controls="site-nav">
-      <span class="nav-toggle-icons">
-        <i class="fa-solid fa-bars-staggered"></i>
-        <i class="fa-solid fa-chevron-up"></i>
+  <aside class="side-nav expanded" id="sideNav">
+    <button class="side-nav-toggle" id="sideNavToggle" type="button" aria-label="Collapse side navigation" aria-expanded="true">
+      <span class="side-brand-mark">JD</span>
+      <span class="side-brand-copy">
+        <span class="side-brand-name">Joy Dhar</span>
+        <span class="side-brand-role">Medical AI Research</span>
       </span>
-      <span class="nav-toggle-text">Shrink Navigation</span>
+      <span class="side-toggle-glyph" aria-hidden="true"></span>
     </button>
 
-    <nav class="tab-nav" id="site-nav" aria-label="Portfolio sections">
-      <a class="tab-link" href="index.html"><i class="fa-solid fa-circle-info"></i><span>About</span></a>
-      <a class="tab-link" href="education.html"><i class="fa-solid fa-graduation-cap"></i><span>Education</span></a>
-      <a class="tab-link" href="experience.html"><i class="fa-solid fa-stethoscope"></i><span>Experience</span></a>
-      <a class="tab-link" href="research.html"><i class="fa-solid fa-microscope"></i><span>Research</span></a>
-      <a class="tab-link" href="publications.html"><i class="fa-solid fa-file-waveform"></i><span>Publications</span></a>
-      <a class="tab-link" href="awards.html"><i class="fa-solid fa-award"></i><span>Awards</span></a>
-      <a class="tab-link active" href="connect.html"><i class="fa-solid fa-envelope-open-text"></i><span>Connect</span></a>
+    <nav class="side-nav-links" aria-label="Portfolio sections">
+      <a class="side-link" href="index.html" data-tooltip="About"><span class="side-icon" aria-hidden="true">A</span><span class="side-text">About</span></a>
+      <a class="side-link" href="education.html" data-tooltip="Education"><span class="side-icon" aria-hidden="true">Ed</span><span class="side-text">Education</span></a>
+      <a class="side-link" href="experience.html" data-tooltip="Experience"><span class="side-icon" aria-hidden="true">Ex</span><span class="side-text">Experience</span></a>
+      <a class="side-link" href="research.html" data-tooltip="Research"><span class="side-icon" aria-hidden="true">R</span><span class="side-text">Research</span></a>
+      <a class="side-link" href="publications.html" data-tooltip="Publications"><span class="side-icon" aria-hidden="true">P</span><span class="side-text">Publications</span></a>
+      <a class="side-link" href="awards.html" data-tooltip="Awards"><span class="side-icon" aria-hidden="true">Aw</span><span class="side-text">Awards</span></a>
+      <a class="side-link active" href="connect.html" data-tooltip="Connect"><span class="side-icon" aria-hidden="true">C</span><span class="side-text">Connect</span></a>
     </nav>
-  </div>
+
+    <div class="side-nav-actions">
+      <a href="Joy_Dhar_CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+    </div>
+  </aside>
 
   <main class="page-shell">
-    <section class="hero card reveal scan-card">
-      <div class="card-head">
-        <span class="icon-badge"><i class="fa-solid fa-envelope-open-text"></i></span>
-        <div>
-          <p class="section-label">Connect</p>
-          <h2>Open to research conversations on multimodal learning, trustworthy AI, and medical image analysis.</h2>
-        </div>
-      </div>
-      <p>The most direct route is email. For collaboration, include the problem setting, modality mix, and expected research outcome.</p>
+    <section class="hero card reveal">
+      <p class="section-label">Contact</p>
+      <h2>Let us build robust, meaningful, and clinically useful AI systems together.</h2>
+      <p>Reach out for collaborations in multimodal learning, medical image analysis, and trustworthy AI.</p>
     </section>
 
     <section class="grid-two reveal">
-      <article class="card scan-card">
-        <div class="card-head">
-          <span class="icon-badge"><i class="fa-solid fa-phone-volume"></i></span>
-          <div>
-            <h3>Direct Contact</h3>
-            <p class="card-subline">Primary channels for academic and research collaboration.</p>
-          </div>
-        </div>
-        <ul class="contact-list">
-          <li><strong>Email:</strong> <a href="mailto:joy.22csz0003@iitrpr.ac.in">joy.22csz0003@iitrpr.ac.in</a></li>
-          <li><strong>Phone:</strong> <a href="tel:+918777091225">+91 8777091225</a></li>
-          <li><strong>Location:</strong> Kolkata, India</li>
-          <li><strong>Affiliation:</strong> Department of Computer Science and Engineering, IIT Ropar</li>
-        </ul>
+      <article class="card">
+        <h3>Direct Contact</h3>
+        <p>Affiliation: Ph.D. Scholar in Computer Science & Engineering, IIT Ropar</p>
+        <p>Email: <a href="mailto:joy.22csz0003@iitrpr.ac.in">joy.22csz0003@iitrpr.ac.in</a></p>
+        <p>Phone: <a href="tel:+918777091225">(+91) 8777091225</a></p>
+        <p>Location: Kolkata, India</p>
       </article>
 
-      <article class="card scan-card">
-        <div class="card-head">
-          <span class="icon-badge"><i class="fa-solid fa-user-group"></i></span>
-          <div>
-            <h3>Online Profiles</h3>
-            <p class="card-subline">Public academic and professional entry points.</p>
-          </div>
-        </div>
-        <ul class="contact-list">
-          <li><strong>GitHub:</strong> <a href="https://github.com/misti1203" target="_blank" rel="noopener noreferrer">misti1203</a></li>
-          <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/joy-dhar-42930a248" target="_blank" rel="noopener noreferrer">joy-dhar-42930a248</a></li>
-          <li><strong>CV:</strong> <a href="Joy_Dhar_CV.pdf" target="_blank" rel="noopener noreferrer">Open PDF</a></li>
-        </ul>
-      </article>
-    </section>
-
-    <section class="grid-two reveal">
-      <article class="card scan-card">
-        <div class="card-head">
-          <span class="icon-badge"><i class="fa-solid fa-handshake-angle"></i></span>
-          <div>
-            <h3>Collaboration Areas</h3>
-            <p class="card-subline">Research directions best aligned with the current program.</p>
-          </div>
-        </div>
-        <ul class="list-tight">
-          <li>Multimodal medical image analysis</li>
-          <li>Adversarial robustness and trustworthy AI</li>
-          <li>Domain generalization for healthcare data</li>
-          <li>Uncertainty-aware deep learning</li>
-          <li>Efficient AI for resource-constrained settings</li>
-        </ul>
-      </article>
-
-      <article class="card scan-card">
-        <div class="card-head">
-          <span class="icon-badge"><i class="fa-solid fa-id-card-clip"></i></span>
-          <div>
-            <h3>References</h3>
-            <p class="card-subline">Primary academic supervision and supporting contacts.</p>
-          </div>
-        </div>
-        <p>Primary academic supervisor: Dr. Puneet Goyal, Associate Professor, IIT Ropar.</p>
-        <p>Email: <a href="mailto:puneet@iitrpr.ac.in">puneet@iitrpr.ac.in</a></p>
-        <p class="reference-note">Additional academic references from the CV are available on request.</p>
+      <article class="card">
+        <h3>Profiles</h3>
+        <p><a href="https://github.com/misti1203" target="_blank" rel="noopener noreferrer">GitHub: misti1203</a></p>
+        <p><a href="https://linkedin.com/in/joy-dhar-42930a248" target="_blank" rel="noopener noreferrer">LinkedIn: joy-dhar-42930a248</a></p>
+        <p><a href="https://scholar.google.com/citations?user=Rc6ezD0AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar: Joy Dhar</a></p>
+        <p><a href="Joy_Dhar_CV.pdf" target="_blank" rel="noopener noreferrer">Open CV PDF</a></p>
       </article>
     </section>
   </main>
 
   <footer class="site-footer" aria-label="Site footer">
     <div class="footer-grid">
-      <section class="footer-block footer-brand">
-        <div class="footer-emblem"><i class="fa-solid fa-dna"></i></div>
-        <p class="footer-title">Joy Dhar</p>
-        <p>For research collaborations in robust multimodal healthcare AI, email remains the fastest channel.</p>
-        <div class="footer-socials">
-          <a href="https://github.com/misti1203" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i><span>GitHub</span></a>
-          <a href="https://www.linkedin.com/in/joy-dhar-42930a248" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i><span>LinkedIn</span></a>
-          <a href="mailto:joy.22csz0003@iitrpr.ac.in"><i class="fa-solid fa-envelope"></i><span>Email</span></a>
-        </div>
-      </section>
-
       <section class="footer-block">
-        <p class="footer-title">Navigate</p>
-        <a href="index.html"><i class="fa-solid fa-circle-info"></i><span>About</span></a>
-        <a href="research.html"><i class="fa-solid fa-microscope"></i><span>Research</span></a>
-        <a href="publications.html"><i class="fa-solid fa-file-waveform"></i><span>Publications</span></a>
-      </section>
-
-      <section class="footer-block">
-        <p class="footer-title">Collaboration Focus</p>
-        <a href="connect.html"><i class="fa-solid fa-handshake-angle"></i><span>Medical Imaging AI</span></a>
-        <a href="connect.html"><i class="fa-solid fa-shield-heart"></i><span>Trustworthy AI</span></a>
-        <a href="connect.html"><i class="fa-solid fa-user-group"></i><span>Research Partnerships</span></a>
+        <p class="footer-title">Explore</p>
+        <a href="connect.html">Connect</a>
+        <a href="publications.html">Publications</a>
+        <a href="index.html">About</a>
       </section>
 
       <section class="footer-block">
         <p class="footer-title">Resources</p>
-        <a href="Joy_Dhar_CV.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-arrow-down"></i><span>Download CV</span></a>
-        <a href="education.html"><i class="fa-solid fa-graduation-cap"></i><span>Education</span></a>
-        <a href="awards.html"><i class="fa-solid fa-award"></i><span>Awards</span></a>
+        <a href="mailto:joy.22csz0003@iitrpr.ac.in">Email</a>
+        <a href="https://linkedin.com/in/joy-dhar-42930a248" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/misti1203" target="_blank" rel="noopener noreferrer">GitHub</a>
       </section>
     </div>
 
     <div class="footer-meta">
       <p>Copyright &copy; <span class="current-year">2026</span> Joy Dhar. All rights reserved.</p>
-      <p>Website refreshed on May 12, 2026 from the CV dated April 18, 2026.</p>
+      <p>Built for GitHub Pages | Last updated: Jun 2026</p>
     </div>
   </footer>
 
