@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;600;800&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="page-about">
@@ -16,7 +17,7 @@
 
   <aside class="side-nav expanded" id="sideNav">
     <button class="side-nav-toggle" id="sideNavToggle" type="button" aria-label="Collapse side navigation" aria-expanded="true">
-      <span class="side-brand-mark">JD</span>
+      <span class="side-brand-mark" aria-hidden="true"><span class="side-brand-initials">JD</span></span>
       <span class="side-brand-copy">
         <span class="side-brand-name">Joy Dhar</span>
         <span class="side-brand-role">Medical AI Research</span>
@@ -25,13 +26,13 @@
     </button>
 
     <nav class="side-nav-links" aria-label="Portfolio sections">
-      <a class="side-link active" href="index.html" data-tooltip="About"><span class="side-icon" aria-hidden="true">A</span><span class="side-text">About</span></a>
-      <a class="side-link" href="education.html" data-tooltip="Education"><span class="side-icon" aria-hidden="true">Ed</span><span class="side-text">Education</span></a>
-      <a class="side-link" href="experience.html" data-tooltip="Experience"><span class="side-icon" aria-hidden="true">Ex</span><span class="side-text">Experience</span></a>
-      <a class="side-link" href="research.html" data-tooltip="Research"><span class="side-icon" aria-hidden="true">R</span><span class="side-text">Research</span></a>
-      <a class="side-link" href="publications.html" data-tooltip="Publications"><span class="side-icon" aria-hidden="true">P</span><span class="side-text">Publications</span></a>
-      <a class="side-link" href="awards.html" data-tooltip="Awards"><span class="side-icon" aria-hidden="true">Aw</span><span class="side-text">Awards</span></a>
-      <a class="side-link" href="connect.html" data-tooltip="Connect"><span class="side-icon" aria-hidden="true">C</span><span class="side-text">Connect</span></a>
+      <a class="side-link active" href="index.html" data-tooltip="About"><span class="side-icon" aria-hidden="true"><i class="fa-solid fa-house"></i></span><span class="side-text">About</span></a>
+      <a class="side-link" href="education.html" data-tooltip="Education"><span class="side-icon" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i></span><span class="side-text">Education</span></a>
+      <a class="side-link" href="experience.html" data-tooltip="Experience"><span class="side-icon" aria-hidden="true"><i class="fa-solid fa-briefcase"></i></span><span class="side-text">Experience</span></a>
+      <a class="side-link" href="research.html" data-tooltip="Research"><span class="side-icon" aria-hidden="true"><i class="fa-solid fa-flask"></i></span><span class="side-text">Research</span></a>
+      <a class="side-link" href="publications.html" data-tooltip="Publications"><span class="side-icon" aria-hidden="true"><i class="fa-solid fa-book"></i></span><span class="side-text">Publications</span></a>
+      <a class="side-link" href="awards.html" data-tooltip="Awards"><span class="side-icon" aria-hidden="true"><i class="fa-solid fa-award"></i></span><span class="side-text">Awards</span></a>
+      <a class="side-link" href="connect.html" data-tooltip="Connect"><span class="side-icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></span><span class="side-text">Connect</span></a>
     </nav>
 
     <div class="side-nav-actions">
@@ -41,26 +42,44 @@
 
   <main class="page-shell home-shell">
     <section class="opening-stage" id="opening-stage" aria-label="Welcome section">
-      <div class="opening-surface card">
-        <p class="section-label">Welcome</p>
-        <h2>Robust AI for Medicine</h2>
-        <p>Efficient, multimodal, and trustworthy AI for resource-constrained healthcare.</p>
-        <a class="scroll-cue" href="#home-content">Scroll to Enter</a>
+      <div class="opening-surface">
+        <h1>Joy Dhar</h1>
+        <p class="hero-subtitle">Ph.D. Scholar | Deep Learning Researcher | Medical AI</p>
+        <div class="hero-badges" aria-label="Research profile highlights">
+          <span><i class="fa-solid fa-building-columns" aria-hidden="true"></i> IIT Ropar</span>
+          <span><i class="fa-solid fa-brain" aria-hidden="true"></i> Multimodal Healthcare AI</span>
+          <span><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Trustworthy Deep Learning</span>
+        </div>
+        <div class="hero-actions">
+          <a class="button-link primary" href="Joy_Dhar_CV.pdf" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Download CV
+          </a>
+          <a class="button-link" href="research.html">
+            <i class="fa-solid fa-microscope" aria-hidden="true"></i> Research Agenda
+          </a>
+          <a class="button-link" href="connect.html">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i> Contact
+          </a>
+        </div>
+        <p class="hero-statement">
+          Building trustworthy AI where clinical reality is noisy, multimodal, and high-stakes.
+        </p>
       </div>
     </section>
 
     <section id="home-content" class="home-content">
-      <section class="hero card reveal">
-        <p class="section-label">Profile</p>
-        <h2>Building trustworthy AI where clinical reality is noisy, multimodal, and high-stakes.</h2>
+      <section class="home-about-panel">
+        <p class="section-label">About</p>
+        <h2>Ph.D. Scholar in Computer Science and Engineering at IIT Ropar.</h2>
         <p>
-          I am a Ph.D. Scholar and Deep Learning Researcher at IIT Ropar working at the intersection of
-          Efficient AI, Multimodal AI, and Trustworthy AI for healthcare. My work spans heterogeneous medical
-          data, including medical imaging, multi-omics, electronic health records, and time-series signals.
+          I work at the intersection of Efficient AI, Multimodal AI, and Trustworthy AI for healthcare.
+          My research spans heterogeneous medical data, including medical imaging, multi-omics, electronic
+          health records, and time-series signals, with emphasis on robustness, transferability, and practical
+          clinical utility.
         </p>
       </section>
 
-      <section class="latest-news-panel card reveal" aria-label="Latest news">
+      <section class="latest-news-panel reveal" aria-label="Latest news">
         <div class="latest-news-header">
           <div>
             <p class="section-label">Latest News</p>
@@ -90,27 +109,92 @@
         </div>
       </section>
 
-      <section class="grid-two reveal">
-        <article class="card">
-          <h3>Current Focus</h3>
-          <ul>
-            <li>ML foundations: supervised, self-supervised, unsupervised, and continual learning</li>
-            <li>Multimodal representation learning, fusion, and cross-modal attention</li>
-            <li>Certified and empirical adversarial robustness under distribution shift</li>
-            <li>Generative AI for healthcare, including GANs, diffusion models, and autoencoders</li>
-          </ul>
+      <section class="metrics-grid reveal" aria-label="Academic snapshot">
+        <article class="metric-card">
+          <strong>14+</strong>
+          <span>Published and accepted research papers</span>
         </article>
-
-        <article class="card">
-          <h3>Tooling</h3>
-          <p><strong>Languages:</strong> Python, C/C++, Java, C#, PHP, MATLAB</p>
-          <p><strong>ML Stack:</strong> TensorFlow, Keras, PyTorch, scikit-learn</p>
-          <p><strong>Data Stack:</strong> NumPy, Pandas, OpenCV, SciPy</p>
-          <p><strong>Workflow:</strong> Jupyter, Colab, LaTeX, VS Code, Kaggle</p>
+        <article class="metric-card">
+          <strong>6</strong>
+          <span>Journal articles in medical and intelligent systems AI</span>
+        </article>
+        <article class="metric-card">
+          <strong>8</strong>
+          <span>Refereed conference papers across AI and vision venues</span>
+        </article>
+        <article class="metric-card">
+          <strong>4</strong>
+          <span>Core research threads across robust healthcare learning</span>
         </article>
       </section>
 
-      <section class="spotlight reveal">
+      <section class="home-section reveal">
+        <h2 class="section-heading">
+          <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+          Research Focus
+        </h2>
+        <div class="research-focus-grid">
+          <article class="focus-card">
+            <i class="fa-solid fa-layer-group focus-icon" aria-hidden="true"></i>
+            <h3>Multimodal Medical AI</h3>
+            <p>Representation learning, fusion, hybrid geometry attention, and cross-modal attention for heterogeneous clinical data.</p>
+          </article>
+          <article class="focus-card">
+            <i class="fa-solid fa-shield-heart focus-icon" aria-hidden="true"></i>
+            <h3>Trustworthy AI</h3>
+            <p>Empirical and certified adversarial robustness, uncertainty-aware learning, and dependable model behavior under shift.</p>
+          </article>
+          <article class="focus-card">
+            <i class="fa-solid fa-microchip focus-icon" aria-hidden="true"></i>
+            <h3>Efficient Healthcare Learning</h3>
+            <p>Practical deep learning for resource-constrained healthcare using supervised, self-supervised, and continual learning.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="home-highlights reveal">
+        <h2 class="section-heading">
+          <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+          Highlights
+        </h2>
+        <p>A concise snapshot for collaborators, reviewers, and research visitors.</p>
+        <div class="highlights-grid">
+          <article class="highlight-card featured">
+            <span class="highlight-badge">Research</span>
+            <h3>Top-tier 2026 acceptances</h3>
+            <p>SIGKDD and ICML papers accepted on multimodal fusion and hybrid space-aware randomized defense.</p>
+            <div class="highlight-meta">SIGKDD 2026 | ICML 2026</div>
+          </article>
+          <article class="highlight-card">
+            <span class="highlight-badge">Journal</span>
+            <h3>Information Fusion 2026</h3>
+            <p>Journal article on robust models for unimodal and multimodal medical imaging data.</p>
+            <a class="highlight-link" href="https://doi.org/10.1016/j.inffus.2025.103822" target="_blank" rel="noopener noreferrer">DOI</a>
+          </article>
+          <article class="highlight-card">
+            <span class="highlight-badge">Award</span>
+            <h3>ANRF Travel Fund</h3>
+            <p>Recipient of Anusandhan National Research Foundation travel support for WACV participation.</p>
+            <div class="highlight-meta">WACV 2025 | Tucson, USA</div>
+          </article>
+          <article class="highlight-card">
+            <span class="highlight-badge">Competition</span>
+            <h3>IEEE VIP Cup Winner</h3>
+            <p>Winner of the IEEE Video and Image Processing Cup at ICIP.</p>
+            <div class="highlight-meta">ICIP 2024 | Abu Dhabi, UAE</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="grid-two reveal">
+        <article class="card">
+          <p class="section-label">Tooling</p>
+          <h3>Technical Stack</h3>
+          <p><strong>Languages:</strong> Python, C/C++, Java, C#, PHP, MATLAB</p>
+          <p><strong>ML Stack:</strong> TensorFlow, Keras, PyTorch, scikit-learn</p>
+          <p><strong>Data Stack:</strong> NumPy, Pandas, OpenCV, SciPy</p>
+        </article>
+
         <article class="card">
           <p class="section-label">Research Mission</p>
           <h3>From lab-grade performance to clinically dependable AI.</h3>

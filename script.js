@@ -136,6 +136,29 @@ for (let i = 0; i < 12; i += 1) {
 }
 
 const openingStage = document.querySelector('#opening-stage');
+const openingBackgrounds = [
+  'images/IMG_5273.jpeg',
+  'images/IMG_6723(1).jpeg',
+  'images/IMG_5084(1).jpeg',
+  'images/IMG_5443(1).jpeg',
+  'images/IMG_7194(1).jpeg'
+];
+
+if (openingStage) {
+  let openingBackgroundIndex = 0;
+
+  function setOpeningBackground() {
+    openingStage.style.backgroundImage = `url("${openingBackgrounds[openingBackgroundIndex]}")`;
+    openingBackgroundIndex = (openingBackgroundIndex + 1) % openingBackgrounds.length;
+  }
+
+  setOpeningBackground();
+
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    setInterval(setOpeningBackground, 5000);
+  }
+}
+
 const openingOrbs = Array.from(document.querySelectorAll('.opening-orb'));
 
 if (openingStage) {
