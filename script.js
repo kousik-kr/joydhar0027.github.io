@@ -137,7 +137,7 @@ for (let i = 0; i < 12; i += 1) {
 
 const openingStage = document.querySelector('#opening-stage');
 const openingBackgrounds = [
-  'images/IMG_5273.jpeg',
+  'images/IMG_3562.jpeg',
   'images/IMG_6723(1).jpeg',
   'images/IMG_5084(1).jpeg',
   'images/IMG_5443(1).jpeg',
