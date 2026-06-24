@@ -859,7 +859,83 @@ body.home-entered .opening-stage {
 .home-about-panel {
   display: grid;
   gap: 0.7rem;
-  max-width: 58rem;
+  max-width: none;
+}
+
+.about-profile-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(17rem, 23rem);
+  align-items: center;
+  gap: clamp(1.5rem, 5vw, 4rem);
+}
+
+.about-copy {
+  display: grid;
+  gap: 0.7rem;
+  max-width: 62rem;
+}
+
+.about-profile-card {
+  position: relative;
+  justify-self: end;
+  width: min(100%, 23rem);
+  margin: 0;
+  padding: 0.55rem;
+  overflow: hidden;
+  border: 1px solid rgba(47, 141, 149, 0.24);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(232, 244, 246, 0.72));
+  box-shadow: var(--shadow-lg);
+}
+
+.about-profile-card::before {
+  content: "";
+  position: absolute;
+  inset: 0.55rem;
+  z-index: 1;
+  border-radius: calc(var(--radius-lg) - 0.35rem);
+  box-shadow: inset 0 -8rem 5rem rgba(15, 24, 32, 0.36);
+  pointer-events: none;
+}
+
+.about-profile-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: calc(var(--radius-lg) - 0.45rem);
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+.about-profile-card figcaption {
+  position: absolute;
+  left: 1.15rem;
+  right: 1.15rem;
+  bottom: 1.15rem;
+  z-index: 2;
+  display: grid;
+  gap: 0.16rem;
+  padding: 0.85rem 0.95rem;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: var(--radius-sm);
+  color: #fff;
+  background: linear-gradient(135deg, rgba(15, 24, 32, 0.78), rgba(23, 82, 89, 0.72));
+  backdrop-filter: blur(12px);
+}
+
+.about-profile-card figcaption span {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.about-profile-card figcaption strong {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+  text-transform: uppercase;
 }
 
 .home-about-panel h2 {
@@ -1418,64 +1494,200 @@ a:hover {
 
 /* Footer */
 .site-footer {
-  margin-top: 2rem;
-  padding: 1.6rem 0 1.8rem;
-  color: var(--ink-soft);
-  font-size: 0.93rem;
-  border-top: 1px solid var(--line);
+  margin-top: 4rem;
+  margin-bottom: 1.6rem;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(15, 24, 32, 0.98), rgba(23, 82, 89, 0.97) 58%, rgba(29, 42, 50, 0.98));
+  box-shadow: 0 22px 70px rgba(15, 24, 32, 0.24);
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, rgba(216, 75, 35, 0.16), transparent 34%, rgba(79, 169, 184, 0.18));
+  pointer-events: none;
 }
 
 .footer-grid {
+  position: relative;
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
-  gap: 1.5rem;
-  padding: 1rem 0 1.2rem;
+  grid-template-columns: minmax(18rem, 1.45fr) repeat(3, minmax(9rem, 0.75fr));
+  gap: clamp(1.35rem, 3vw, 2.5rem);
+  padding: clamp(1.55rem, 3.8vw, 2.5rem);
+}
+
+.footer-brand {
+  display: grid;
+  align-content: start;
+  gap: 0.9rem;
+  max-width: 31rem;
+}
+
+.footer-kicker {
+  width: fit-content;
+  margin: 0;
+  padding: 0.34rem 0.72rem;
+  color: #ffd1a2;
+  border: 1px solid rgba(255, 209, 162, 0.26);
+  border-radius: 999px;
+  background: rgba(255, 209, 162, 0.08);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.footer-brand h2 {
+  margin: 0;
+  color: #fff;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.footer-brand p:not(.footer-kicker) {
+  margin: 0;
+  max-width: 28rem;
+  line-height: 1.72;
+}
+
+.footer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.72rem;
+  margin-top: 0.25rem;
+}
+
+.footer-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0.78rem 1rem;
+  color: var(--ink);
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(15, 24, 32, 0.2);
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform 220ms ease, box-shadow 220ms ease, background 220ms ease, color 220ms ease;
+}
+
+.footer-cta.secondary {
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+}
+
+.footer-cta:hover,
+.footer-cta:focus {
+  color: var(--ink);
+  background: #ffd1a2;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(15, 24, 32, 0.28);
 }
 
 .footer-block {
   display: grid;
   align-content: start;
-  gap: 0.5rem;
+  gap: 0.65rem;
+  min-width: 0;
 }
 
 .footer-title {
   margin: 0 0 0.25rem;
   font-family: "Fraunces", Georgia, serif;
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   font-weight: 700;
-  color: var(--ink);
+  color: #fff;
 }
 
-.footer-block p {
+.footer-block p,
+.footer-block span {
   margin: 0;
   line-height: 1.5;
 }
 
-.footer-block a {
-  color: var(--ink-soft);
+.footer-block a,
+.footer-block span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.62rem;
+  min-width: 0;
+  color: rgba(255, 255, 255, 0.72);
   text-decoration: none;
   width: fit-content;
-  font-weight: 500;
-  transition: color 220ms ease;
+  max-width: 100%;
+  font-size: 0.91rem;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+  transition: color 220ms ease, transform 220ms ease;
 }
 
-.footer-block a:hover {
-  color: var(--accent);
+.footer-block a i,
+.footer-block span i {
+  flex: 0 0 1.1rem;
+  color: #ffd1a2;
+  text-align: center;
+}
+
+.footer-block a:hover,
+.footer-block a:focus {
+  color: #fff;
+  transform: translateX(3px);
 }
 
 .footer-meta {
-  border-top: 1px solid var(--line);
-  padding-top: 1rem;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 1rem clamp(1.55rem, 3.8vw, 2.5rem);
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.2rem;
   flex-wrap: wrap;
+  background: rgba(15, 24, 32, 0.34);
 }
 
 .footer-meta p {
   margin: 0;
-  font-size: 0.84rem;
-  color: var(--ink-soft);
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.footer-social a {
+  display: inline-grid;
+  place-items: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+  transition: transform 220ms ease, background 220ms ease, border-color 220ms ease;
+}
+
+.footer-social a:hover,
+.footer-social a:focus {
+  color: var(--ink);
+  border-color: #ffd1a2;
+  background: #ffd1a2;
+  transform: translateY(-2px);
 }
 
 /* Animations */
@@ -1558,6 +1770,26 @@ a:hover {
   }
 }
 
+@media (max-width: 1100px) {
+  .about-profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-profile-card {
+    justify-self: start;
+    width: min(100%, 24rem);
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+    max-width: 42rem;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 900px) {
   :root {
@@ -1602,13 +1834,27 @@ a:hover {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .about-profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-profile-card {
+    justify-self: start;
+    width: min(100%, 24rem);
+  }
+
   .publication-grid {
     grid-template-columns: 1fr;
   }
 
   .footer-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.2rem;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+    max-width: 42rem;
   }
 
   .latest-news-box {
@@ -1655,6 +1901,15 @@ a:hover {
     gap: 1rem;
   }
 
+  .footer-brand {
+    grid-column: auto;
+  }
+
+  .footer-actions,
+  .footer-cta {
+    width: 100%;
+  }
+
   .footer-meta {
     flex-direction: column;
     align-items: flex-start;
@@ -1696,6 +1951,21 @@ a:hover {
   .home-content {
     gap: 1.4rem;
     padding-top: 1.4rem;
+  }
+
+  .about-profile-card {
+    width: 100%;
+    padding: 0.45rem;
+  }
+
+  .about-profile-card::before {
+    inset: 0.45rem;
+  }
+
+  .about-profile-card figcaption {
+    left: 0.9rem;
+    right: 0.9rem;
+    bottom: 0.9rem;
   }
 
   .home-about-panel h2,
